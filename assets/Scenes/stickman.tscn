@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://n3h8dhnusdwl"]
+
+[ext_resource type="Script" uid="uid://b5h1kpmjw8j5l" path="res://assets/scripts/stickman.gd" id="1_a7tnr"]
+[ext_resource type="Texture2D" uid="uid://rjf426nngn6v" path="res://assets/sprites/Personaje.png" id="1_nl6ku"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7tnr"]
+size = Vector2(70, 171)
+
+[node name="Stickman" type="CharacterBody2D" unique_id=564413360 node_paths=PackedStringArray("spriteStickman")]
+script = ExtResource("1_a7tnr")
+spriteStickman = NodePath("Sprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=491625580]
+position = Vector2(-4, 0.5)
+shape = SubResource("RectangleShape2D_a7tnr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=651148033]
+texture = ExtResource("1_nl6ku")

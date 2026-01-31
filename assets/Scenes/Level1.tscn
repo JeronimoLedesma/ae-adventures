@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://diqx60uhy4xrn"]
+
+[ext_resource type="Texture2D" uid="uid://bt6k7j1lkndyi" path="res://assets/sprites/Fondo.jpg" id="1_7qbmk"]
+[ext_resource type="PackedScene" uid="uid://n3h8dhnusdwl" path="res://assets/Scenes/stickman.tscn" id="2_17eo5"]
+[ext_resource type="Texture2D" uid="uid://ci45jubta8pvu" path="res://assets/sprites/Piso.png" id="3_aom1w"]
+[ext_resource type="Texture2D" uid="uid://brj634fmasmjk" path="res://assets/sprites/Piso bloqueado.png" id="4_v0j53"]
+[ext_resource type="PackedScene" uid="uid://cffchb5dv3b4m" path="res://assets/Scenes/Layers_Wall1.tscn" id="6_v0j53"]
+[ext_resource type="PackedScene" uid="uid://buhb1o6uxk2sm" path="res://assets/Scenes/Layers_Wall2.tscn" id="7_17eo5"]
+[ext_resource type="PackedScene" uid="uid://feog4n3qpmn7" path="res://assets/Scenes/Key.tscn" id="7_spd5k"]
+[ext_resource type="PackedScene" uid="uid://d3q0s1a0b86sg" path="res://assets/Scenes/Door.tscn" id="8_jb4np"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jb4np"]
+size = Vector2(102, 1085)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17eo5"]
+size = Vector2(1911, 116)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spd5k"]
+size = Vector2(310, 110)
+
+[node name="Node2D" type="Node2D" unique_id=5663288]
+
+[node name="Background" type="Node2D" parent="." unique_id=319861261]
+position = Vector2(1111, 540)
+scale = Vector2(0.84000003, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=235513550]
+texture = ExtResource("1_7qbmk")
+
+[node name="InvisibleWall" type="StaticBody2D" parent="." unique_id=744991550]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWall" unique_id=1237315419]
+position = Vector2(251, 533)
+shape = SubResource("RectangleShape2D_jb4np")
+
+[node name="InvisibleWall2" type="StaticBody2D" parent="." unique_id=1368354813]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWall2" unique_id=1504180876]
+position = Vector2(1968, 533)
+shape = SubResource("RectangleShape2D_jb4np")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1375310863]
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=1237162828]
+position = Vector2(1110, 540)
+scale = Vector2(0.84000003, 1)
+texture = ExtResource("3_aom1w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1462709009]
+position = Vector2(1109.58, 1018)
+scale = Vector2(0.84000003, 1)
+shape = SubResource("RectangleShape2D_17eo5")
+
+[node name="HigherFloor" type="StaticBody2D" parent="." unique_id=1229442394]
+
+[node name="Sprite2D" type="Sprite2D" parent="HigherFloor" unique_id=129301006]
+position = Vector2(1110, 650)
+scale = Vector2(0.84000003, 1)
+texture = ExtResource("4_v0j53")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HigherFloor" unique_id=997768393]
+position = Vector2(432.12, 367)
+scale = Vector2(0.84000003, 1)
+shape = SubResource("RectangleShape2D_spd5k")
+
+[node name="Object1" parent="." unique_id=1367497213 node_paths=PackedStringArray("button_visible", "button_mask", "button_invert") instance=ExtResource("6_v0j53")]
+position = Vector2(1110.0001, 596)
+scale = Vector2(0.84, 0.84)
+button_visible = NodePath("../Buttons/Object1/Visible")
+button_mask = NodePath("../Buttons/Object1/Mask")
+button_invert = NodePath("../Buttons/Object1/Invert")
+
+[node name="Object2" parent="." unique_id=1339143741 node_paths=PackedStringArray("button_visible", "button_mask", "button_invert") instance=ExtResource("7_17eo5")]
+position = Vector2(1106, 605.00006)
+scale = Vector2(0.84, 0.84)
+button_visible = NodePath("../Buttons/Object2/Visible")
+button_mask = NodePath("../Buttons/Object2/Mask")
+button_invert = NodePath("../Buttons/Object2/Invert")
+
+[node name="Key" parent="." unique_id=1585223162 instance=ExtResource("7_spd5k")]
+position = Vector2(1156.0001, 574)
+scale = Vector2(0.84, 0.84)
+
+[node name="Door" parent="." unique_id=2132548742 instance=ExtResource("8_jb4np")]
+position = Vector2(1141, 608)
+scale = Vector2(0.84, 0.84)
+
+[node name="Stickman" parent="." unique_id=564413360 node_paths=PackedStringArray("key", "door") instance=ExtResource("2_17eo5")]
+position = Vector2(379, 862)
+key = NodePath("../Key")
+door = NodePath("../Door")
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=171285836]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Object1" type="HBoxContainer" parent="Buttons" unique_id=1526012969]
+layout_mode = 2
+
+[node name="Visible" type="Button" parent="Buttons/Object1" unique_id=914937908]
+layout_mode = 2
+text = "visibility"
+
+[node name="Mask" type="Button" parent="Buttons/Object1" unique_id=1157997335]
+layout_mode = 2
+text = "mask"
+
+[node name="Invert" type="Button" parent="Buttons/Object1" unique_id=59150145]
+layout_mode = 2
+text = "invert"
+
+[node name="Object2" type="HBoxContainer" parent="Buttons" unique_id=2127301733]
+layout_mode = 2
+
+[node name="Visible" type="Button" parent="Buttons/Object2" unique_id=461217003]
+layout_mode = 2
+text = "visibility"
+
+[node name="Mask" type="Button" parent="Buttons/Object2" unique_id=1691879933]
+layout_mode = 2
+text = "mask"
+
+[node name="Invert" type="Button" parent="Buttons/Object2" unique_id=336531364]
+layout_mode = 2
+text = "invert"
+
+[connection signal="button_down" from="Buttons/Object1/Visible" to="Object1" method="_on_button_button_down"]
+[connection signal="button_down" from="Buttons/Object1/Mask" to="Object1" method="_on_button_2_button_down"]
+[connection signal="button_down" from="Buttons/Object1/Invert" to="Object1" method="_on_button_3_button_down"]
+[connection signal="button_down" from="Buttons/Object2/Visible" to="Object1" method="_on_button_button_down"]
+[connection signal="button_down" from="Buttons/Object2/Mask" to="Object1" method="_on_button_2_button_down"]
+[connection signal="button_down" from="Buttons/Object2/Invert" to="Object1" method="_on_button_3_button_down"]
