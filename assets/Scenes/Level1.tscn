@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://diqx60uhy4xrn"]
 
 [ext_resource type="Texture2D" uid="uid://bt6k7j1lkndyi" path="res://assets/sprites/Level1/Fondo.jpg" id="1_7qbmk"]
-[ext_resource type="Texture2D" uid="uid://dj6u7kctbqpxi" path="res://assets/UI-Estructura-Pantalla-00.jpg" id="1_ewbn1"]
+[ext_resource type="Texture2D" uid="uid://4jfiobpdv8wt" path="res://assets/sprites/UI/UI-Estructura-Pantalla-01.jpg" id="1_vhp58"]
 [ext_resource type="PackedScene" uid="uid://n3h8dhnusdwl" path="res://assets/Scenes/stickman.tscn" id="2_17eo5"]
 [ext_resource type="Script" uid="uid://b0ak687cflfy1" path="res://assets/scripts/timer_bar.gd" id="3_0dp6w"]
 [ext_resource type="Texture2D" uid="uid://xs075ehiir0i" path="res://assets/sprites/UI/Capa - Apagado.jpg" id="3_5dh08"]
@@ -39,7 +39,7 @@ offset_bottom = 40.0
 
 [node name="UiEstructuraPantalla00" type="Sprite2D" parent="UI" unique_id=907392600]
 position = Vector2(967, 539)
-texture = ExtResource("1_ewbn1")
+texture = ExtResource("1_vhp58")
 
 [node name="Buttons" type="VBoxContainer" parent="UI" unique_id=171285836]
 layout_mode = 0
@@ -96,8 +96,9 @@ layout_mode = 2
 
 [node name="Visible" type="Button" parent="UI/Buttons/Object2/HBoxContainer" unique_id=461217003]
 layout_mode = 2
-icon = ExtResource("3_5dh08")
+icon = ExtResource("5_4hsav")
 script = ExtResource("4_nfwm3")
+toggle = true
 toggled_button = ExtResource("5_4hsav")
 untoggled_button = ExtResource("3_5dh08")
 
@@ -191,7 +192,7 @@ offset_left = 560.0
 offset_top = 925.0
 offset_right = 1882.0
 offset_bottom = 1044.0
-max_value = 20.0
+max_value = 30.0
 step = 0.05
 show_percentage = false
 script = ExtResource("3_0dp6w")
@@ -265,6 +266,7 @@ scale = Vector2(0.84, 0.84)
 button_visible = NodePath("../../UI/Buttons/Object2/HBoxContainer/Visible")
 button_mask = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Mask")
 button_invert = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Invert")
+visible_full = true
 
 [node name="Key" parent="Game" unique_id=1585223162 instance=ExtResource("7_spd5k")]
 position = Vector2(1156.0001, 574)
@@ -276,6 +278,9 @@ scale = Vector2(0.84, 0.84)
 
 [node name="Stickman" parent="Game" unique_id=564413360 node_paths=PackedStringArray("key", "door") instance=ExtResource("2_17eo5")]
 position = Vector2(379, 862)
+SPEED = 350
+currentLevel = 1
+GRAVITY = 600
 key = NodePath("../Key")
 door = NodePath("../Door")
 

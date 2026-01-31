@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://buliguyjc7bmk"]
+
+[ext_resource type="Texture2D" uid="uid://4jfiobpdv8wt" path="res://assets/sprites/UI/UI-Estructura-Pantalla-01.jpg" id="1_g5spw"]
+[ext_resource type="Theme" uid="uid://b52ybk3bln0d4" path="res://assets/UI_theme.tres" id="2_nvnmc"]
+[ext_resource type="Texture2D" uid="uid://dnct8cju8non7" path="res://assets/sprites/UI/Composicion_Icono.png" id="3_meym1"]
+[ext_resource type="Script" uid="uid://3fg005ebrvwy" path="res://assets/scripts/Level_Button.gd" id="4_vgp2n"]
+[ext_resource type="PackedScene" uid="uid://diqx60uhy4xrn" path="res://assets/Scenes/Level1.tscn" id="5_g5spw"]
+[ext_resource type="PackedScene" uid="uid://bthhxw1fo8igh" path="res://assets/Scenes/MainMenu.tscn" id="7_7mnry"]
+[ext_resource type="Texture2D" uid="uid://cmqnn6m1fnhn2" path="res://assets/sprites/UI/Candado.png" id="10_colby"]
+[ext_resource type="PackedScene" uid="uid://feog4n3qpmn7" path="res://assets/Scenes/Key.tscn" id="17_pu6j8"]
+[ext_resource type="PackedScene" uid="uid://d3q0s1a0b86sg" path="res://assets/Scenes/Door.tscn" id="18_uhlss"]
+
+[node name="Node2D" type="Node2D" unique_id=5663288]
+
+[node name="UI" type="Control" parent="." unique_id=2131463720]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UiEstructuraPantalla00" type="Sprite2D" parent="UI" unique_id=907392600]
+position = Vector2(967, 539)
+texture = ExtResource("1_g5spw")
+
+[node name="Buttons" type="VBoxContainer" parent="UI" unique_id=171285836]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 143.00003
+offset_right = 814.1159
+offset_bottom = 587.0
+scale = Vector2(0.63018227, 0.63018227)
+theme = ExtResource("2_nvnmc")
+
+[node name="Object1" type="HBoxContainer" parent="UI/Buttons" unique_id=1526012969]
+layout_mode = 2
+theme = ExtResource("2_nvnmc")
+theme_override_constants/separation = 150
+
+[node name="Button 1" type="Button" parent="UI/Buttons/Object1" unique_id=914937908 node_paths=PackedStringArray("lock")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Comp. 1"
+icon = ExtResource("3_meym1")
+script = ExtResource("4_vgp2n")
+lock = NodePath("../Lock 1")
+scene = ExtResource("5_g5spw")
+
+[node name="Lock 1" type="Button" parent="UI/Buttons/Object1" unique_id=1906178778]
+layout_mode = 2
+icon = ExtResource("10_colby")
+
+[node name="Object2" type="HBoxContainer" parent="UI/Buttons" unique_id=2127301733]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="Button 2" type="Button" parent="UI/Buttons/Object2" unique_id=461217003 node_paths=PackedStringArray("lock")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Comp. 2"
+icon = ExtResource("3_meym1")
+script = ExtResource("4_vgp2n")
+level = 1
+lock = NodePath("../Lock 2")
+scene = ExtResource("7_7mnry")
+
+[node name="Lock 2" type="Button" parent="UI/Buttons/Object2" unique_id=1897645395]
+layout_mode = 2
+icon = ExtResource("10_colby")
+
+[node name="Object3" type="HBoxContainer" parent="UI/Buttons" unique_id=1677670410]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="Button 3" type="Button" parent="UI/Buttons/Object3" unique_id=1140558950 node_paths=PackedStringArray("lock")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Comp. 3"
+icon = ExtResource("3_meym1")
+script = ExtResource("4_vgp2n")
+level = 2
+lock = NodePath("../Lock 3")
+scene = ExtResource("17_pu6j8")
+
+[node name="Lock 3" type="Button" parent="UI/Buttons/Object3" unique_id=663144041]
+layout_mode = 2
+icon = ExtResource("10_colby")
+
+[node name="Object4" type="HBoxContainer" parent="UI/Buttons" unique_id=2100711568]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="Button 4" type="Button" parent="UI/Buttons/Object4" unique_id=190430106 node_paths=PackedStringArray("lock")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Comp. 4"
+icon = ExtResource("3_meym1")
+script = ExtResource("4_vgp2n")
+level = 3
+lock = NodePath("../Lock 4")
+scene = ExtResource("18_uhlss")
+
+[node name="Lock 4" type="Button" parent="UI/Buttons/Object4" unique_id=587705275]
+layout_mode = 2
+icon = ExtResource("10_colby")

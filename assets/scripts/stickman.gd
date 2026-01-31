@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
 
-@export var SPEED = 350.0
-const GRAVITY = 1200.0
+@export var SPEED: int
+@export var currentLevel: int
+@export var GRAVITY: int
 var direction = 1
 @export var spriteStickman: Sprite2D
 @export var key: Area2D
@@ -37,4 +38,5 @@ func _on_key_get(body: CharacterBody2D):
 
 func _on_door_enter(body: CharacterBody2D):
 	if has_key && (body == self):
-		print("nivel completado")
+		Singleton.complete_level(currentLevel)
+		get_tree().change_scene_to_file("res://assets/Scenes/LevelSelect.tscn")

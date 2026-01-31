@@ -3,9 +3,9 @@ extends Node2D
 @export var button_visible: Button
 @export var button_mask: Button
 @export var button_invert: Button
-@onready var visible_full: bool
-@onready var masked: bool
-@onready var invert : bool
+@export var visible_full: bool
+@export var masked: bool
+@export var invert : bool
 @export var full: Sprite2D
 @export var mask: Sprite2D
 @export var inverted: Sprite2D
