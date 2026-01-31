@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bthhxw1fo8igh"]
+
+[ext_resource type="Texture2D" uid="uid://b7g1w68wrieys" path="res://assets/generic-logo-140952.png" id="1_t6pbl"]
+[ext_resource type="Theme" uid="uid://b52ybk3bln0d4" path="res://assets/UI_theme.tres" id="2_uxrh4"]
+[ext_resource type="Script" uid="uid://dllgvl3v0xblq" path="res://assets/scripts/StartButton.gd" id="3_xl453"]
+[ext_resource type="Script" uid="uid://v5xqp2kmgwi4" path="res://assets/scripts/QuitButton.gd" id="4_uxrh4"]
+
+[node name="Node2D" type="Node2D" unique_id=1796401391]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=779748912]
+position = Vector2(960, 200)
+texture = ExtResource("1_t6pbl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1178029838]
+offset_left = 729.0
+offset_top = 501.0
+offset_right = 1289.0
+offset_bottom = 864.0
+theme = ExtResource("2_uxrh4")
+theme_override_constants/separation = 60
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=592779991]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Start or sumething"
+script = ExtResource("3_xl453")
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1154206668]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Exit or sumother"
+script = ExtResource("4_uxrh4")
+
+[connection signal="button_down" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_button_down"]
+[connection signal="button_down" from="VBoxContainer/Button2" to="VBoxContainer/Button2" method="_on_button_down"]

@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://d3q0s1a0b86sg" path="res://assets/Scenes/Door.tscn" id="8_jb4np"]
 [ext_resource type="Theme" uid="uid://b52ybk3bln0d4" path="res://assets/UI_theme.tres" id="9_jb4np"]
 [ext_resource type="Texture2D" uid="uid://bid45bwn86uar" path="res://assets/sprites/UI/Inversion - 2.jpg" id="9_vhp58"]
+[ext_resource type="Texture2D" uid="uid://cmqnn6m1fnhn2" path="res://assets/sprites/UI/Candado.png" id="10_vhp58"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jb4np"]
 size = Vector2(102, 1085)
@@ -44,29 +45,42 @@ texture = ExtResource("1_ewbn1")
 layout_mode = 0
 offset_left = 8.0
 offset_top = 492.0
-offset_right = 189.0
-offset_bottom = 558.0
+offset_right = 814.1159
+offset_bottom = 712.0
+scale = Vector2(0.63018227, 0.63018227)
 theme = ExtResource("9_jb4np")
 
 [node name="Object1" type="HBoxContainer" parent="UI/Buttons" unique_id=1526012969]
 layout_mode = 2
 theme = ExtResource("9_jb4np")
+theme_override_constants/separation = 150
 
-[node name="Visible" type="Button" parent="UI/Buttons/Object1" unique_id=914937908]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object1" unique_id=1050632266]
+layout_mode = 2
+
+[node name="Visible" type="Button" parent="UI/Buttons/Object1/HBoxContainer" unique_id=914937908]
 layout_mode = 2
 icon = ExtResource("3_5dh08")
 script = ExtResource("4_nfwm3")
 toggled_button = ExtResource("5_4hsav")
 untoggled_button = ExtResource("3_5dh08")
 
-[node name="Mask" type="Button" parent="UI/Buttons/Object1" unique_id=1157997335]
+[node name="Label" type="Label" parent="UI/Buttons/Object1/HBoxContainer" unique_id=632744941]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Muro 1"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object1" unique_id=2110281575]
+layout_mode = 2
+
+[node name="Mask" type="Button" parent="UI/Buttons/Object1/HBoxContainer2" unique_id=1157997335]
 layout_mode = 2
 icon = ExtResource("4_gts6m")
 script = ExtResource("4_nfwm3")
 toggled_button = ExtResource("7_oyhia")
 untoggled_button = ExtResource("4_gts6m")
 
-[node name="Invert" type="Button" parent="UI/Buttons/Object1" unique_id=59150145]
+[node name="Invert" type="Button" parent="UI/Buttons/Object1/HBoxContainer2" unique_id=59150145]
 layout_mode = 2
 icon = ExtResource("5_nfwm3")
 script = ExtResource("4_nfwm3")
@@ -75,27 +89,101 @@ untoggled_button = ExtResource("5_nfwm3")
 
 [node name="Object2" type="HBoxContainer" parent="UI/Buttons" unique_id=2127301733]
 layout_mode = 2
+theme_override_constants/separation = 150
 
-[node name="Visible" type="Button" parent="UI/Buttons/Object2" unique_id=461217003]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object2" unique_id=1058181272]
+layout_mode = 2
+
+[node name="Visible" type="Button" parent="UI/Buttons/Object2/HBoxContainer" unique_id=461217003]
 layout_mode = 2
 icon = ExtResource("3_5dh08")
 script = ExtResource("4_nfwm3")
 toggled_button = ExtResource("5_4hsav")
 untoggled_button = ExtResource("3_5dh08")
 
-[node name="Mask" type="Button" parent="UI/Buttons/Object2" unique_id=1691879933]
+[node name="Label2" type="Label" parent="UI/Buttons/Object2/HBoxContainer" unique_id=1266888372]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Muro 2"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object2" unique_id=122322500]
+layout_mode = 2
+
+[node name="Mask" type="Button" parent="UI/Buttons/Object2/HBoxContainer2" unique_id=1691879933]
 layout_mode = 2
 icon = ExtResource("4_gts6m")
 script = ExtResource("4_nfwm3")
 toggled_button = ExtResource("7_oyhia")
 untoggled_button = ExtResource("4_gts6m")
 
-[node name="Invert" type="Button" parent="UI/Buttons/Object2" unique_id=336531364]
+[node name="Invert" type="Button" parent="UI/Buttons/Object2/HBoxContainer2" unique_id=336531364]
 layout_mode = 2
 icon = ExtResource("5_nfwm3")
 script = ExtResource("4_nfwm3")
 toggled_button = ExtResource("9_vhp58")
 untoggled_button = ExtResource("5_nfwm3")
+
+[node name="Object3" type="HBoxContainer" parent="UI/Buttons" unique_id=1677670410]
+layout_mode = 2
+theme_override_constants/separation = 237
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object3" unique_id=2088326726]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/Buttons/Object3/HBoxContainer" unique_id=1140558950]
+layout_mode = 2
+icon = ExtResource("5_4hsav")
+
+[node name="Label2" type="Label" parent="UI/Buttons/Object3/HBoxContainer" unique_id=1329536943]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Piso"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object3" unique_id=1559901623]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/Buttons/Object3/HBoxContainer2" unique_id=853777522]
+layout_mode = 2
+icon = ExtResource("4_gts6m")
+
+[node name="Button2" type="Button" parent="UI/Buttons/Object3/HBoxContainer2" unique_id=917566664]
+layout_mode = 2
+icon = ExtResource("5_nfwm3")
+
+[node name="Button3" type="Button" parent="UI/Buttons/Object3/HBoxContainer2" unique_id=663144041]
+layout_mode = 2
+icon = ExtResource("10_vhp58")
+
+[node name="Object4" type="HBoxContainer" parent="UI/Buttons" unique_id=2100711568]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object4" unique_id=1331772168]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/Buttons/Object4/HBoxContainer" unique_id=190430106]
+layout_mode = 2
+icon = ExtResource("5_4hsav")
+
+[node name="Label2" type="Label" parent="UI/Buttons/Object4/HBoxContainer" unique_id=1327622115]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Piso Elevado"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object4" unique_id=1311847975]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/Buttons/Object4/HBoxContainer2" unique_id=550799123]
+layout_mode = 2
+icon = ExtResource("4_gts6m")
+
+[node name="Button2" type="Button" parent="UI/Buttons/Object4/HBoxContainer2" unique_id=1306080265]
+layout_mode = 2
+icon = ExtResource("5_nfwm3")
+
+[node name="Button3" type="Button" parent="UI/Buttons/Object4/HBoxContainer2" unique_id=587705275]
+layout_mode = 2
+icon = ExtResource("10_vhp58")
 
 [node name="ProgressBar" type="ProgressBar" parent="UI" unique_id=514564891]
 layout_mode = 0
@@ -167,16 +255,16 @@ shape = SubResource("RectangleShape2D_spd5k")
 [node name="Object1" parent="Game" unique_id=1367497213 node_paths=PackedStringArray("button_visible", "button_mask", "button_invert") instance=ExtResource("6_v0j53")]
 position = Vector2(1110.0001, 596)
 scale = Vector2(0.84, 0.84)
-button_visible = NodePath("../../UI/Buttons/Object1/Visible")
-button_mask = NodePath("../../UI/Buttons/Object1/Mask")
-button_invert = NodePath("../../UI/Buttons/Object1/Invert")
+button_visible = NodePath("../../UI/Buttons/Object1/HBoxContainer/Visible")
+button_mask = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Invert")
 
 [node name="Object2" parent="Game" unique_id=1339143741 node_paths=PackedStringArray("button_visible", "button_mask", "button_invert") instance=ExtResource("7_17eo5")]
 position = Vector2(1106, 605.00006)
 scale = Vector2(0.84, 0.84)
-button_visible = NodePath("../../UI/Buttons/Object2/Visible")
-button_mask = NodePath("../../UI/Buttons/Object2/Mask")
-button_invert = NodePath("../../UI/Buttons/Object2/Invert")
+button_visible = NodePath("../../UI/Buttons/Object2/HBoxContainer/Visible")
+button_mask = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Invert")
 
 [node name="Key" parent="Game" unique_id=1585223162 instance=ExtResource("7_spd5k")]
 position = Vector2(1156.0001, 574)
@@ -191,10 +279,10 @@ position = Vector2(379, 862)
 key = NodePath("../Key")
 door = NodePath("../Door")
 
-[connection signal="button_down" from="UI/Buttons/Object1/Visible" to="Game/Object1" method="_on_button_button_down"]
-[connection signal="button_down" from="UI/Buttons/Object1/Mask" to="Game/Object1" method="_on_button_2_button_down"]
-[connection signal="button_down" from="UI/Buttons/Object1/Invert" to="Game/Object1" method="_on_button_3_button_down"]
-[connection signal="button_down" from="UI/Buttons/Object2/Visible" to="Game/Object1" method="_on_button_button_down"]
-[connection signal="button_down" from="UI/Buttons/Object2/Mask" to="Game/Object1" method="_on_button_2_button_down"]
-[connection signal="button_down" from="UI/Buttons/Object2/Invert" to="Game/Object1" method="_on_button_3_button_down"]
+[connection signal="button_down" from="UI/Buttons/Object1/HBoxContainer/Visible" to="Game/Object1" method="_on_button_button_down"]
+[connection signal="button_down" from="UI/Buttons/Object1/HBoxContainer2/Mask" to="Game/Object1" method="_on_button_2_button_down"]
+[connection signal="button_down" from="UI/Buttons/Object1/HBoxContainer2/Invert" to="Game/Object1" method="_on_button_3_button_down"]
+[connection signal="button_down" from="UI/Buttons/Object2/HBoxContainer/Visible" to="Game/Object1" method="_on_button_button_down"]
+[connection signal="button_down" from="UI/Buttons/Object2/HBoxContainer2/Mask" to="Game/Object1" method="_on_button_2_button_down"]
+[connection signal="button_down" from="UI/Buttons/Object2/HBoxContainer2/Invert" to="Game/Object1" method="_on_button_3_button_down"]
 [connection signal="timeout" from="UI/ProgressBar/Timer" to="UI/ProgressBar" method="_on_timer_timeout"]
