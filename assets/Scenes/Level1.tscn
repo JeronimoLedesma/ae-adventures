@@ -1,13 +1,23 @@
 [gd_scene format=3 uid="uid://diqx60uhy4xrn"]
 
 [ext_resource type="Texture2D" uid="uid://bt6k7j1lkndyi" path="res://assets/sprites/Level1/Fondo.jpg" id="1_7qbmk"]
+[ext_resource type="Texture2D" uid="uid://dj6u7kctbqpxi" path="res://assets/UI-Estructura-Pantalla-00.jpg" id="1_ewbn1"]
 [ext_resource type="PackedScene" uid="uid://n3h8dhnusdwl" path="res://assets/Scenes/stickman.tscn" id="2_17eo5"]
+[ext_resource type="Script" uid="uid://b0ak687cflfy1" path="res://assets/scripts/timer_bar.gd" id="3_0dp6w"]
+[ext_resource type="Texture2D" uid="uid://xs075ehiir0i" path="res://assets/sprites/UI/Capa - Apagado.jpg" id="3_5dh08"]
 [ext_resource type="Texture2D" uid="uid://ci45jubta8pvu" path="res://assets/sprites/Level1/Piso.png" id="3_aom1w"]
+[ext_resource type="Texture2D" uid="uid://cq36bfc6havli" path="res://assets/sprites/UI/Mascara - Apagado.jpg" id="4_gts6m"]
+[ext_resource type="Script" uid="uid://dllhpmieg5uvt" path="res://assets/scripts/visible_button.gd" id="4_nfwm3"]
 [ext_resource type="Texture2D" uid="uid://brj634fmasmjk" path="res://assets/sprites/Level1/Piso bloqueado.png" id="4_v0j53"]
+[ext_resource type="Texture2D" uid="uid://dgjntge4u28lq" path="res://assets/sprites/UI/Capa - Prendido.jpg" id="5_4hsav"]
+[ext_resource type="Texture2D" uid="uid://dkgx0f3f31iv2" path="res://assets/sprites/UI/Inversion - 1.jpg" id="5_nfwm3"]
 [ext_resource type="PackedScene" uid="uid://cffchb5dv3b4m" path="res://assets/Scenes/Layers_Wall1.tscn" id="6_v0j53"]
 [ext_resource type="PackedScene" uid="uid://buhb1o6uxk2sm" path="res://assets/Scenes/Layers_Wall2.tscn" id="7_17eo5"]
+[ext_resource type="Texture2D" uid="uid://cq2riwk06yr27" path="res://assets/sprites/UI/Mascara - Prendido.jpg" id="7_oyhia"]
 [ext_resource type="PackedScene" uid="uid://feog4n3qpmn7" path="res://assets/Scenes/Key.tscn" id="7_spd5k"]
 [ext_resource type="PackedScene" uid="uid://d3q0s1a0b86sg" path="res://assets/Scenes/Door.tscn" id="8_jb4np"]
+[ext_resource type="Theme" uid="uid://b52ybk3bln0d4" path="res://assets/UI_theme.tres" id="9_jb4np"]
+[ext_resource type="Texture2D" uid="uid://bid45bwn86uar" path="res://assets/sprites/UI/Inversion - 2.jpg" id="9_vhp58"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jb4np"]
 size = Vector2(102, 1085)
@@ -20,113 +30,171 @@ size = Vector2(310, 110)
 
 [node name="Node2D" type="Node2D" unique_id=5663288]
 
-[node name="Background" type="Node2D" parent="." unique_id=319861261]
+[node name="UI" type="Control" parent="." unique_id=2131463720]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UiEstructuraPantalla00" type="Sprite2D" parent="UI" unique_id=907392600]
+position = Vector2(967, 539)
+texture = ExtResource("1_ewbn1")
+
+[node name="Buttons" type="VBoxContainer" parent="UI" unique_id=171285836]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 492.0
+offset_right = 189.0
+offset_bottom = 558.0
+theme = ExtResource("9_jb4np")
+
+[node name="Object1" type="HBoxContainer" parent="UI/Buttons" unique_id=1526012969]
+layout_mode = 2
+theme = ExtResource("9_jb4np")
+
+[node name="Visible" type="Button" parent="UI/Buttons/Object1" unique_id=914937908]
+layout_mode = 2
+icon = ExtResource("3_5dh08")
+script = ExtResource("4_nfwm3")
+toggled_button = ExtResource("5_4hsav")
+untoggled_button = ExtResource("3_5dh08")
+
+[node name="Mask" type="Button" parent="UI/Buttons/Object1" unique_id=1157997335]
+layout_mode = 2
+icon = ExtResource("4_gts6m")
+script = ExtResource("4_nfwm3")
+toggled_button = ExtResource("7_oyhia")
+untoggled_button = ExtResource("4_gts6m")
+
+[node name="Invert" type="Button" parent="UI/Buttons/Object1" unique_id=59150145]
+layout_mode = 2
+icon = ExtResource("5_nfwm3")
+script = ExtResource("4_nfwm3")
+toggled_button = ExtResource("9_vhp58")
+untoggled_button = ExtResource("5_nfwm3")
+
+[node name="Object2" type="HBoxContainer" parent="UI/Buttons" unique_id=2127301733]
+layout_mode = 2
+
+[node name="Visible" type="Button" parent="UI/Buttons/Object2" unique_id=461217003]
+layout_mode = 2
+icon = ExtResource("3_5dh08")
+script = ExtResource("4_nfwm3")
+toggled_button = ExtResource("5_4hsav")
+untoggled_button = ExtResource("3_5dh08")
+
+[node name="Mask" type="Button" parent="UI/Buttons/Object2" unique_id=1691879933]
+layout_mode = 2
+icon = ExtResource("4_gts6m")
+script = ExtResource("4_nfwm3")
+toggled_button = ExtResource("7_oyhia")
+untoggled_button = ExtResource("4_gts6m")
+
+[node name="Invert" type="Button" parent="UI/Buttons/Object2" unique_id=336531364]
+layout_mode = 2
+icon = ExtResource("5_nfwm3")
+script = ExtResource("4_nfwm3")
+toggled_button = ExtResource("9_vhp58")
+untoggled_button = ExtResource("5_nfwm3")
+
+[node name="ProgressBar" type="ProgressBar" parent="UI" unique_id=514564891]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 925.0
+offset_right = 1882.0
+offset_bottom = 1044.0
+max_value = 20.0
+step = 0.05
+show_percentage = false
+script = ExtResource("3_0dp6w")
+
+[node name="Timer" type="Timer" parent="UI/ProgressBar" unique_id=94666529]
+process_callback = 0
+wait_time = 0.05
+autostart = true
+
+[node name="Game" type="Node2D" parent="." unique_id=1253256916]
+position = Vector2(310, 129)
+scale = Vector2(0.822, 0.69)
+
+[node name="Background" type="Node2D" parent="Game" unique_id=319861261]
 position = Vector2(1111, 540)
 scale = Vector2(0.84000003, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=235513550]
+[node name="Sprite2D" type="Sprite2D" parent="Game/Background" unique_id=235513550]
 texture = ExtResource("1_7qbmk")
 
-[node name="InvisibleWall" type="StaticBody2D" parent="." unique_id=744991550]
+[node name="InvisibleWall" type="StaticBody2D" parent="Game" unique_id=744991550]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWall" unique_id=1237315419]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/InvisibleWall" unique_id=1237315419]
+visible = false
 position = Vector2(251, 533)
 shape = SubResource("RectangleShape2D_jb4np")
 
-[node name="InvisibleWall2" type="StaticBody2D" parent="." unique_id=1368354813]
+[node name="InvisibleWall2" type="StaticBody2D" parent="Game" unique_id=1368354813]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWall2" unique_id=1504180876]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/InvisibleWall2" unique_id=1504180876]
+visible = false
 position = Vector2(1968, 533)
 shape = SubResource("RectangleShape2D_jb4np")
 
-[node name="Floor" type="StaticBody2D" parent="." unique_id=1375310863]
+[node name="Floor" type="StaticBody2D" parent="Game" unique_id=1375310863]
 
-[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=1237162828]
+[node name="Sprite2D" type="Sprite2D" parent="Game/Floor" unique_id=1237162828]
 position = Vector2(1110, 540)
 scale = Vector2(0.84000003, 1)
 texture = ExtResource("3_aom1w")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1462709009]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Floor" unique_id=1462709009]
+visible = false
 position = Vector2(1109.58, 1018)
 scale = Vector2(0.84000003, 1)
 shape = SubResource("RectangleShape2D_17eo5")
 
-[node name="HigherFloor" type="StaticBody2D" parent="." unique_id=1229442394]
+[node name="HigherFloor" type="StaticBody2D" parent="Game" unique_id=1229442394]
 
-[node name="Sprite2D" type="Sprite2D" parent="HigherFloor" unique_id=129301006]
+[node name="Sprite2D" type="Sprite2D" parent="Game/HigherFloor" unique_id=129301006]
 position = Vector2(1110, 650)
 scale = Vector2(0.84000003, 1)
 texture = ExtResource("4_v0j53")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HigherFloor" unique_id=997768393]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/HigherFloor" unique_id=997768393]
+visible = false
 position = Vector2(432.12, 367)
 scale = Vector2(0.84000003, 1)
 shape = SubResource("RectangleShape2D_spd5k")
 
-[node name="Object1" parent="." unique_id=1367497213 node_paths=PackedStringArray("button_visible", "button_mask", "button_invert") instance=ExtResource("6_v0j53")]
+[node name="Object1" parent="Game" unique_id=1367497213 node_paths=PackedStringArray("button_visible", "button_mask", "button_invert") instance=ExtResource("6_v0j53")]
 position = Vector2(1110.0001, 596)
 scale = Vector2(0.84, 0.84)
-button_visible = NodePath("../Buttons/Object1/Visible")
-button_mask = NodePath("../Buttons/Object1/Mask")
-button_invert = NodePath("../Buttons/Object1/Invert")
+button_visible = NodePath("../../UI/Buttons/Object1/Visible")
+button_mask = NodePath("../../UI/Buttons/Object1/Mask")
+button_invert = NodePath("../../UI/Buttons/Object1/Invert")
 
-[node name="Object2" parent="." unique_id=1339143741 node_paths=PackedStringArray("button_visible", "button_mask", "button_invert") instance=ExtResource("7_17eo5")]
+[node name="Object2" parent="Game" unique_id=1339143741 node_paths=PackedStringArray("button_visible", "button_mask", "button_invert") instance=ExtResource("7_17eo5")]
 position = Vector2(1106, 605.00006)
 scale = Vector2(0.84, 0.84)
-button_visible = NodePath("../Buttons/Object2/Visible")
-button_mask = NodePath("../Buttons/Object2/Mask")
-button_invert = NodePath("../Buttons/Object2/Invert")
+button_visible = NodePath("../../UI/Buttons/Object2/Visible")
+button_mask = NodePath("../../UI/Buttons/Object2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object2/Invert")
 
-[node name="Key" parent="." unique_id=1585223162 instance=ExtResource("7_spd5k")]
+[node name="Key" parent="Game" unique_id=1585223162 instance=ExtResource("7_spd5k")]
 position = Vector2(1156.0001, 574)
 scale = Vector2(0.84, 0.84)
 
-[node name="Door" parent="." unique_id=2132548742 instance=ExtResource("8_jb4np")]
+[node name="Door" parent="Game" unique_id=2132548742 instance=ExtResource("8_jb4np")]
 position = Vector2(1141, 608)
 scale = Vector2(0.84, 0.84)
 
-[node name="Stickman" parent="." unique_id=564413360 node_paths=PackedStringArray("key", "door") instance=ExtResource("2_17eo5")]
+[node name="Stickman" parent="Game" unique_id=564413360 node_paths=PackedStringArray("key", "door") instance=ExtResource("2_17eo5")]
 position = Vector2(379, 862)
 key = NodePath("../Key")
 door = NodePath("../Door")
 
-[node name="Buttons" type="VBoxContainer" parent="." unique_id=171285836]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Object1" type="HBoxContainer" parent="Buttons" unique_id=1526012969]
-layout_mode = 2
-
-[node name="Visible" type="Button" parent="Buttons/Object1" unique_id=914937908]
-layout_mode = 2
-text = "visibility"
-
-[node name="Mask" type="Button" parent="Buttons/Object1" unique_id=1157997335]
-layout_mode = 2
-text = "mask"
-
-[node name="Invert" type="Button" parent="Buttons/Object1" unique_id=59150145]
-layout_mode = 2
-text = "invert"
-
-[node name="Object2" type="HBoxContainer" parent="Buttons" unique_id=2127301733]
-layout_mode = 2
-
-[node name="Visible" type="Button" parent="Buttons/Object2" unique_id=461217003]
-layout_mode = 2
-text = "visibility"
-
-[node name="Mask" type="Button" parent="Buttons/Object2" unique_id=1691879933]
-layout_mode = 2
-text = "mask"
-
-[node name="Invert" type="Button" parent="Buttons/Object2" unique_id=336531364]
-layout_mode = 2
-text = "invert"
-
-[connection signal="button_down" from="Buttons/Object1/Visible" to="Object1" method="_on_button_button_down"]
-[connection signal="button_down" from="Buttons/Object1/Mask" to="Object1" method="_on_button_2_button_down"]
-[connection signal="button_down" from="Buttons/Object1/Invert" to="Object1" method="_on_button_3_button_down"]
-[connection signal="button_down" from="Buttons/Object2/Visible" to="Object1" method="_on_button_button_down"]
-[connection signal="button_down" from="Buttons/Object2/Mask" to="Object1" method="_on_button_2_button_down"]
-[connection signal="button_down" from="Buttons/Object2/Invert" to="Object1" method="_on_button_3_button_down"]
+[connection signal="button_down" from="UI/Buttons/Object1/Visible" to="Game/Object1" method="_on_button_button_down"]
+[connection signal="button_down" from="UI/Buttons/Object1/Mask" to="Game/Object1" method="_on_button_2_button_down"]
+[connection signal="button_down" from="UI/Buttons/Object1/Invert" to="Game/Object1" method="_on_button_3_button_down"]
+[connection signal="button_down" from="UI/Buttons/Object2/Visible" to="Game/Object1" method="_on_button_button_down"]
+[connection signal="button_down" from="UI/Buttons/Object2/Mask" to="Game/Object1" method="_on_button_2_button_down"]
+[connection signal="button_down" from="UI/Buttons/Object2/Invert" to="Game/Object1" method="_on_button_3_button_down"]
+[connection signal="timeout" from="UI/ProgressBar/Timer" to="UI/ProgressBar" method="_on_timer_timeout"]

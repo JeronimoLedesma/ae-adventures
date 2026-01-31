@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 500.0
+@export var SPEED = 350.0
 const GRAVITY = 1200.0
 var direction = 1
 @export var spriteStickman: Sprite2D

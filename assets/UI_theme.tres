@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://b52ybk3bln0d4"]
+
+[ext_resource type="FontFile" uid="uid://cejhc0lq3onx8" path="res://assets/Segoe UI Bold.ttf" id="1_05en4"]
+
+[resource]
+default_font = ExtResource("1_05en4")

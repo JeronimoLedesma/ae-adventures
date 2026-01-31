@@ -31,6 +31,7 @@ visible = false
 texture = ExtResource("4_hepti")
 
 [node name="FullCollision" type="CollisionShape2D" parent="Wall" unique_id=1296995104]
+visible = false
 position = Vector2(496.5, 163.5)
 shape = SubResource("RectangleShape2D_18c8o")
 disabled = true
