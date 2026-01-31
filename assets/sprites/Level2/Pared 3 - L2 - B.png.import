@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c23h4d7fyc8hh"
-path="res://.godot/imported/Pared 1 - B.png-dd88ac9a423566f883d959ad815bae00.ctex"
+uid="uid://b7kjwsmgnav6u"
+path="res://.godot/imported/Pared 3 - L2 - B.png-57144a964acf698ff9055e978729aa60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Pared 1 - B.png"
-dest_files=["res://.godot/imported/Pared 1 - B.png-dd88ac9a423566f883d959ad815bae00.ctex"]
+source_file="res://assets/sprites/Level2/Pared 3 - L2 - B.png"
+dest_files=["res://.godot/imported/Pared 3 - L2 - B.png-57144a964acf698ff9055e978729aa60.ctex"]
 
 [params]
 

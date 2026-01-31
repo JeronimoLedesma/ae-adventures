@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://n3h8dhnusdwl"]
 
 [ext_resource type="Script" uid="uid://b5h1kpmjw8j5l" path="res://assets/scripts/stickman.gd" id="1_a7tnr"]
-[ext_resource type="Texture2D" uid="uid://rjf426nngn6v" path="res://assets/sprites/Personaje.png" id="1_nl6ku"]
+[ext_resource type="Texture2D" uid="uid://rjf426nngn6v" path="res://assets/sprites/Level1/Personaje.png" id="1_nl6ku"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a7tnr"]
 size = Vector2(70, 171)

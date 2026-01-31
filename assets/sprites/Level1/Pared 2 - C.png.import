@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci45jubta8pvu"
-path="res://.godot/imported/Piso.png-307bad1503641728c944fb709c1d9e6a.ctex"
+uid="uid://dtm7qt2b5hpqh"
+path="res://.godot/imported/Pared 2 - C.png-fd1a91f36bfe8d9a25dd37983a19e5e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Piso.png"
-dest_files=["res://.godot/imported/Piso.png-307bad1503641728c944fb709c1d9e6a.ctex"]
+source_file="res://assets/sprites/Level1/Pared 2 - C.png"
+dest_files=["res://.godot/imported/Pared 2 - C.png-fd1a91f36bfe8d9a25dd37983a19e5e5.ctex"]
 
 [params]
 

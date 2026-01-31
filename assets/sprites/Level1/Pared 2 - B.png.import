@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsuiflox0gvrf"
-path="res://.godot/imported/Pared 2 - B.png-46391883ee68a1a5a139abc0b4d5f925.ctex"
+path="res://.godot/imported/Pared 2 - B.png-5b4e3007b470f18aeb4b4a3f12cca127.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Pared 2 - B.png"
-dest_files=["res://.godot/imported/Pared 2 - B.png-46391883ee68a1a5a139abc0b4d5f925.ctex"]
+source_file="res://assets/sprites/Level1/Pared 2 - B.png"
+dest_files=["res://.godot/imported/Pared 2 - B.png-5b4e3007b470f18aeb4b4a3f12cca127.ctex"]
 
 [params]
 

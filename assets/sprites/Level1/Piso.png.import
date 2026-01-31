@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt6k7j1lkndyi"
-path="res://.godot/imported/Fondo.jpg-ed4a408109fab41794e9171e2c27037c.ctex"
+uid="uid://ci45jubta8pvu"
+path="res://.godot/imported/Piso.png-fb98cd18ce178a037af539ecf72dad4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Fondo.jpg"
-dest_files=["res://.godot/imported/Fondo.jpg-ed4a408109fab41794e9171e2c27037c.ctex"]
+source_file="res://assets/sprites/Level1/Piso.png"
+dest_files=["res://.godot/imported/Piso.png-fb98cd18ce178a037af539ecf72dad4b.ctex"]
 
 [params]
 

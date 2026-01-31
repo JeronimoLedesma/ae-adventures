@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brj634fmasmjk"
-path="res://.godot/imported/Piso bloqueado.png-9bde80ec7ddb6fafeef33fa500027315.ctex"
+uid="uid://rjf426nngn6v"
+path="res://.godot/imported/Personaje.png-8fa0c7b115beb4b6e86f657718aab28b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Piso bloqueado.png"
-dest_files=["res://.godot/imported/Piso bloqueado.png-9bde80ec7ddb6fafeef33fa500027315.ctex"]
+source_file="res://assets/sprites/Level1/Personaje.png"
+dest_files=["res://.godot/imported/Personaje.png-8fa0c7b115beb4b6e86f657718aab28b.ctex"]
 
 [params]
 

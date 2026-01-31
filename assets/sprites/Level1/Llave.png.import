@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtm7qt2b5hpqh"
-path="res://.godot/imported/Pared 2 - C.png-29e9aa13778db9bcce6ff1301214b091.ctex"
+uid="uid://c3oxmrvmplj11"
+path="res://.godot/imported/Llave.png-28107442e33afb5ebe6e2199088fd130.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Pared 2 - C.png"
-dest_files=["res://.godot/imported/Pared 2 - C.png-29e9aa13778db9bcce6ff1301214b091.ctex"]
+source_file="res://assets/sprites/Level1/Llave.png"
+dest_files=["res://.godot/imported/Llave.png-28107442e33afb5ebe6e2199088fd130.ctex"]
 
 [params]
 

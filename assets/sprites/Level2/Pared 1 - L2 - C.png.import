@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7030hpjndsoo"
-path="res://.godot/imported/Stickman.png-1b40a037dd7f1f0274f5379dbcadab0f.ctex"
+uid="uid://cgbcbj4w62nms"
+path="res://.godot/imported/Pared 1 - L2 - C.png-d5f43bda1fd8d4badafbca2f418a84e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Stickman.png"
-dest_files=["res://.godot/imported/Stickman.png-1b40a037dd7f1f0274f5379dbcadab0f.ctex"]
+source_file="res://assets/sprites/Level2/Pared 1 - L2 - C.png"
+dest_files=["res://.godot/imported/Pared 1 - L2 - C.png-d5f43bda1fd8d4badafbca2f418a84e3.ctex"]
 
 [params]
 

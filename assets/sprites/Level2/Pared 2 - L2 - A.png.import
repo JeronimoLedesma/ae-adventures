@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rjf426nngn6v"
-path="res://.godot/imported/Personaje.png-cd6720f2a05503b53e170d26917a4045.ctex"
+uid="uid://dnmeljn5v3rdk"
+path="res://.godot/imported/Pared 2 - L2 - A.png-8bc7ab25c632835c68a684384e0ce7f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Personaje.png"
-dest_files=["res://.godot/imported/Personaje.png-cd6720f2a05503b53e170d26917a4045.ctex"]
+source_file="res://assets/sprites/Level2/Pared 2 - L2 - A.png"
+dest_files=["res://.godot/imported/Pared 2 - L2 - A.png-8bc7ab25c632835c68a684384e0ce7f1.ctex"]
 
 [params]
 

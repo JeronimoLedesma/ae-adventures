@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl7mgqa01y6pd"
-path="res://.godot/imported/Pared 1 - A.png-5beeb73eae1a5884bb076f5d570d3f8c.ctex"
+uid="uid://bt6k7j1lkndyi"
+path="res://.godot/imported/Fondo.jpg-d0e6938de4f6b3d620dbf883fdf75095.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Pared 1 - A.png"
-dest_files=["res://.godot/imported/Pared 1 - A.png-5beeb73eae1a5884bb076f5d570d3f8c.ctex"]
+source_file="res://assets/sprites/Level1/Fondo.jpg"
+dest_files=["res://.godot/imported/Fondo.jpg-d0e6938de4f6b3d620dbf883fdf75095.ctex"]
 
 [params]
 

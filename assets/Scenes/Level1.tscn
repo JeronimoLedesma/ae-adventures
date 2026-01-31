@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://diqx60uhy4xrn"]
 
-[ext_resource type="Texture2D" uid="uid://bt6k7j1lkndyi" path="res://assets/sprites/Fondo.jpg" id="1_7qbmk"]
+[ext_resource type="Texture2D" uid="uid://bt6k7j1lkndyi" path="res://assets/sprites/Level1/Fondo.jpg" id="1_7qbmk"]
 [ext_resource type="PackedScene" uid="uid://n3h8dhnusdwl" path="res://assets/Scenes/stickman.tscn" id="2_17eo5"]
-[ext_resource type="Texture2D" uid="uid://ci45jubta8pvu" path="res://assets/sprites/Piso.png" id="3_aom1w"]
-[ext_resource type="Texture2D" uid="uid://brj634fmasmjk" path="res://assets/sprites/Piso bloqueado.png" id="4_v0j53"]
+[ext_resource type="Texture2D" uid="uid://ci45jubta8pvu" path="res://assets/sprites/Level1/Piso.png" id="3_aom1w"]
+[ext_resource type="Texture2D" uid="uid://brj634fmasmjk" path="res://assets/sprites/Level1/Piso bloqueado.png" id="4_v0j53"]
 [ext_resource type="PackedScene" uid="uid://cffchb5dv3b4m" path="res://assets/Scenes/Layers_Wall1.tscn" id="6_v0j53"]
 [ext_resource type="PackedScene" uid="uid://buhb1o6uxk2sm" path="res://assets/Scenes/Layers_Wall2.tscn" id="7_17eo5"]
 [ext_resource type="PackedScene" uid="uid://feog4n3qpmn7" path="res://assets/Scenes/Key.tscn" id="7_spd5k"]

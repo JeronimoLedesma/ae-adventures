@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://buhb1o6uxk2sm"]
 
 [ext_resource type="Script" uid="uid://cnw43w3c3pfin" path="res://assets/scripts/wall.gd" id="1_f2hsn"]
-[ext_resource type="Texture2D" uid="uid://bghfvxfwxdahm" path="res://assets/sprites/Pared 2 - A.png" id="2_f2hsn"]
-[ext_resource type="Texture2D" uid="uid://dsuiflox0gvrf" path="res://assets/sprites/Pared 2 - B.png" id="3_g2qld"]
-[ext_resource type="Texture2D" uid="uid://dtm7qt2b5hpqh" path="res://assets/sprites/Pared 2 - C.png" id="4_hepti"]
+[ext_resource type="Texture2D" uid="uid://bghfvxfwxdahm" path="res://assets/sprites/Level1/Pared 2 - A.png" id="2_f2hsn"]
+[ext_resource type="Texture2D" uid="uid://dsuiflox0gvrf" path="res://assets/sprites/Level1/Pared 2 - B.png" id="3_g2qld"]
+[ext_resource type="Texture2D" uid="uid://dtm7qt2b5hpqh" path="res://assets/sprites/Level1/Pared 2 - C.png" id="4_hepti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18c8o"]
 size = Vector2(923, 511)

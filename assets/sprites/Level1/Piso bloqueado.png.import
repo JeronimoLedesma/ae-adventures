@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvyron7kr44ix"
-path="res://.godot/imported/Puerta.png-92af18d1aef0014b2d50dad242ad8b9a.ctex"
+uid="uid://brj634fmasmjk"
+path="res://.godot/imported/Piso bloqueado.png-926dc17390a0256f9ddb8c56fea9f55f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Puerta.png"
-dest_files=["res://.godot/imported/Puerta.png-92af18d1aef0014b2d50dad242ad8b9a.ctex"]
+source_file="res://assets/sprites/Level1/Piso bloqueado.png"
+dest_files=["res://.godot/imported/Piso bloqueado.png-926dc17390a0256f9ddb8c56fea9f55f.ctex"]
 
 [params]
 
