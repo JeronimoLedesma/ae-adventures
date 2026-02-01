@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://csgjjaruwx03u"]
+
+[ext_resource type="Script" uid="uid://cnw43w3c3pfin" path="res://assets/scripts/wall.gd" id="1_1xshq"]
+[ext_resource type="Texture2D" uid="uid://olsyekff04ob" path="res://assets/sprites/Level2/Pared 3 - L2 - A.png" id="2_1xshq"]
+[ext_resource type="Texture2D" uid="uid://b7kjwsmgnav6u" path="res://assets/sprites/Level2/Pared 3 - L2 - B.png" id="3_pp4gw"]
+[ext_resource type="Texture2D" uid="uid://cearryftlvg1l" path="res://assets/sprites/Level2/Pared 3 - L2 - C.png" id="4_1xshq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18c8o"]
+size = Vector2(838, 478)
+
+[node name="Node2D" type="Node2D" unique_id=1367497213 node_paths=PackedStringArray("full", "mask", "inverted", "full_collision", "mask_collision", "inverted_collision")]
+script = ExtResource("1_1xshq")
+full = NodePath("Wall/Full")
+mask = NodePath("Wall/Mask")
+inverted = NodePath("Wall/Inverted")
+full_collision = NodePath("Wall/FullCollision")
+mask_collision = NodePath("Wall/MaskCollision")
+inverted_collision = NodePath("Wall/InvertedCollision")
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=360763863]
+
+[node name="Full" type="Sprite2D" parent="Wall" unique_id=733697231]
+texture = ExtResource("2_1xshq")
+
+[node name="Mask" type="Sprite2D" parent="Wall" unique_id=1330926084]
+visible = false
+texture = ExtResource("3_pp4gw")
+
+[node name="Inverted" type="Sprite2D" parent="Wall" unique_id=740074628]
+visible = false
+texture = ExtResource("4_1xshq")
+
+[node name="FullCollision" type="CollisionShape2D" parent="Wall" unique_id=1296995104]
+visible = false
+shape = SubResource("RectangleShape2D_18c8o")
+
+[node name="MaskCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1301042776]
+visible = false
+scale = Vector2(0.6454727, 0.67352474)
+polygon = PackedVector2Array(-647.5874, -354.8496, -343.934, -354.8496, 260.27435, 234.58678, 381.11603, 350.39545, -642.93964, 350.39545)
+disabled = true
+
+[node name="InvertedCollision" type="CollisionPolygon2D" parent="Wall" unique_id=17506865]
+visible = false
+polygon = PackedVector2Array(-212, -241, 419, -235, 420, 234, 255, 234)

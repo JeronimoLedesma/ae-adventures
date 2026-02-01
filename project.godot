@@ -13,11 +13,12 @@ config_version=5
 config/name="AE_Adventures"
 run/main_scene="uid://bthhxw1fo8igh"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dv7ta26qnkrxy"
 
 [autoload]
 
 Singleton="*uid://bccte7twmd2ck"
+Music="*uid://cl7s2qy7eka4w"
 
 [display]
 

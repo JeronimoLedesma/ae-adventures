@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://coebwqifadh7f"]
+
+[ext_resource type="Script" uid="uid://cnw43w3c3pfin" path="res://assets/scripts/wall.gd" id="1_dk1wa"]
+[ext_resource type="Texture2D" uid="uid://q04llonosxvb" path="res://assets/sprites/Level2/Pared 1 - L2 - A.png" id="2_so3g7"]
+[ext_resource type="Texture2D" uid="uid://f808udpbe6pn" path="res://assets/sprites/Level2/Pared 1 - L2 - B.png" id="3_so3g7"]
+[ext_resource type="Texture2D" uid="uid://cgbcbj4w62nms" path="res://assets/sprites/Level2/Pared 1 - L2 - C.png" id="4_so3g7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18c8o"]
+size = Vector2(838, 478)
+
+[node name="Node2D" type="Node2D" unique_id=1367497213 node_paths=PackedStringArray("full", "mask", "inverted", "full_collision", "mask_collision", "inverted_collision")]
+script = ExtResource("1_dk1wa")
+full = NodePath("Wall/Full")
+mask = NodePath("Wall/Mask")
+inverted = NodePath("Wall/Inverted")
+full_collision = NodePath("Wall/FullCollision")
+mask_collision = NodePath("Wall/MaskCollision")
+inverted_collision = NodePath("Wall/InvertedCollision")
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=360763863]
+
+[node name="Full" type="Sprite2D" parent="Wall" unique_id=733697231]
+texture = ExtResource("2_so3g7")
+
+[node name="Mask" type="Sprite2D" parent="Wall" unique_id=1330926084]
+visible = false
+texture = ExtResource("3_so3g7")
+
+[node name="Inverted" type="Sprite2D" parent="Wall" unique_id=740074628]
+visible = false
+texture = ExtResource("4_so3g7")
+
+[node name="FullCollision" type="CollisionShape2D" parent="Wall" unique_id=1296995104]
+visible = false
+shape = SubResource("RectangleShape2D_18c8o")
+
+[node name="MaskCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1301042776]
+visible = false
+scale = Vector2(0.6454727, 0.67352474)
+polygon = PackedVector2Array(-647.5874, -354.8496, 139.4327, -360.7885, 646.03815, 129.1712, 649.13666, 353.3649, -642.93964, 350.39545)
+disabled = true
+
+[node name="InvertedCollision" type="CollisionPolygon2D" parent="Wall" unique_id=2024017732]
+visible = false
+position = Vector2(-144, 49)
+scale = Vector2(0.84065485, 0.84065485)
+polygon = PackedVector2Array(296, -348, 667.3369, 40.444656, 669.716, -347.34827)
+disabled = true

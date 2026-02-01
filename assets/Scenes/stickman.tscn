@@ -1,20 +1,192 @@
 [gd_scene format=3 uid="uid://n3h8dhnusdwl"]
 
 [ext_resource type="Script" uid="uid://b5h1kpmjw8j5l" path="res://assets/scripts/stickman.gd" id="1_a7tnr"]
-[ext_resource type="Texture2D" uid="uid://rjf426nngn6v" path="res://assets/sprites/Level1/Personaje.png" id="1_nl6ku"]
+[ext_resource type="Texture2D" uid="uid://doux1eeo4c65f" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911905593_0000.png" id="2_vewfy"]
+[ext_resource type="Texture2D" uid="uid://n1q45kbm2q38" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911905805_0001.png" id="3_7a17w"]
+[ext_resource type="Texture2D" uid="uid://d4cxlxhaw0tdg" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911905921_0002.png" id="4_dro2m"]
+[ext_resource type="Texture2D" uid="uid://dawhogkw7y1s1" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911906019_0003.png" id="5_vjhqr"]
+[ext_resource type="Texture2D" uid="uid://dxapxhoe0lgn4" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911906136_0004.png" id="6_if55u"]
+[ext_resource type="Texture2D" uid="uid://qtmr26j6y00f" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911906220_0005.png" id="7_6vdu8"]
+[ext_resource type="Texture2D" uid="uid://kwjen6ntxgcb" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911906319_0006.png" id="8_5sshx"]
+[ext_resource type="Texture2D" uid="uid://314okjl8bqb7" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911906436_0007.png" id="9_yqtob"]
+[ext_resource type="Texture2D" uid="uid://dv8xgl8cogcv5" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911906520_0008.png" id="10_t3syi"]
+[ext_resource type="Texture2D" uid="uid://c13cdcsfox7ba" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911906605_0009.png" id="11_3ps7i"]
+[ext_resource type="Texture2D" uid="uid://ke3x1cwql36p" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911906708_0010.png" id="12_4dgp3"]
+[ext_resource type="Texture2D" uid="uid://blnqftb0pxbnv" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911906819_0011.png" id="13_tb6b4"]
+[ext_resource type="Texture2D" uid="uid://c111mh6gq136a" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911906920_0012.png" id="14_q3u1q"]
+[ext_resource type="Texture2D" uid="uid://83ipxikr22tx" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911907001_0013.png" id="15_xep5p"]
+[ext_resource type="Texture2D" uid="uid://dd44k85liajve" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911907120_0014.png" id="16_877ni"]
+[ext_resource type="Texture2D" uid="uid://dlbrnnpqhxfpd" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911907222_0015.png" id="17_jb3gl"]
+[ext_resource type="Texture2D" uid="uid://tnomam4b7sng" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911907335_0016.png" id="18_htnve"]
+[ext_resource type="Texture2D" uid="uid://bmgk44wb2e7l0" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911907419_0017.png" id="19_xsgp5"]
+[ext_resource type="Texture2D" uid="uid://dlu45pcc57y3" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911907503_0018.png" id="20_y8he2"]
+[ext_resource type="Texture2D" uid="uid://chekplcpncbbm" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911907602_0019.png" id="21_iadwo"]
+[ext_resource type="Texture2D" uid="uid://bjfurxp7kbxcg" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911907686_0020.png" id="22_srkp2"]
+[ext_resource type="Texture2D" uid="uid://nguctdnw5ml0" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911907769_0021.png" id="23_nwts1"]
+[ext_resource type="Texture2D" uid="uid://css5kml7wmyc4" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911907873_0022.png" id="24_rl31r"]
+[ext_resource type="Texture2D" uid="uid://bvbhuwilx1jox" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911907969_0023.png" id="25_8nu42"]
+[ext_resource type="Texture2D" uid="uid://dmypajyimkayh" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911908069_0024.png" id="26_kfgq6"]
+[ext_resource type="Texture2D" uid="uid://dyrnp33spcyor" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911908200_0025.png" id="27_6mdwn"]
+[ext_resource type="Texture2D" uid="uid://birxnp83k7l53" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911908304_0026.png" id="28_83li8"]
+[ext_resource type="Texture2D" uid="uid://dvhqrq3jr0f1p" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911908401_0027.png" id="29_3j1rn"]
+[ext_resource type="Texture2D" uid="uid://cuf611r82fs7" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911908534_0028.png" id="30_im5ct"]
+[ext_resource type="Texture2D" uid="uid://cvcnpprokkd2u" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911908618_0029.png" id="31_hitnv"]
+[ext_resource type="Texture2D" uid="uid://bd506lrg4yw6t" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911908720_0030.png" id="32_f0awt"]
+[ext_resource type="Texture2D" uid="uid://r4reyc4k8vt" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911908835_0031.png" id="33_ahl1o"]
+[ext_resource type="Texture2D" uid="uid://bur8hk72qw4xu" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911908935_0032.png" id="34_pwabv"]
+[ext_resource type="Texture2D" uid="uid://bbveuirq75lip" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911909017_0033.png" id="35_ylecg"]
+[ext_resource type="Texture2D" uid="uid://tih4pm47dus6" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911909100_0034.png" id="36_rfv55"]
+[ext_resource type="Texture2D" uid="uid://xgfosbjkd5qf" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911909204_0035.png" id="37_01otw"]
+[ext_resource type="Texture2D" uid="uid://bvks6kymvuke2" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911909304_0036.png" id="38_yv5db"]
+[ext_resource type="Texture2D" uid="uid://nf3tmvkmlvw" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911909408_0037.png" id="39_ryhim"]
+[ext_resource type="Texture2D" uid="uid://dyel1e4ty4voq" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911909520_0038.png" id="40_lpd6p"]
+[ext_resource type="Texture2D" uid="uid://d4a0fwqehqv7g" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911909606_0039.png" id="41_t1s7d"]
+[ext_resource type="Texture2D" uid="uid://nectytsfrplg" path="res://assets/sprites/Caminata feliz maldito desgraciado/caminata brinco maldito desgraciado-1769911909699_0040.png" id="42_b8qhv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a7tnr"]
 size = Vector2(70, 171)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ukwr7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vewfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7a17w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dro2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vjhqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_if55u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6vdu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5sshx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yqtob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_t3syi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3ps7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4dgp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tb6b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_q3u1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_xep5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_877ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jb3gl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_htnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_xsgp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_y8he2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_iadwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_srkp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_nwts1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_rl31r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_8nu42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_kfgq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_6mdwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_83li8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3j1rn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_im5ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_hitnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_f0awt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ahl1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_pwabv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ylecg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_rfv55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_01otw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_yv5db")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ryhim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_lpd6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_t1s7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_b8qhv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 120.0
+}]
+
 [node name="Stickman" type="CharacterBody2D" unique_id=564413360 node_paths=PackedStringArray("spriteStickman")]
 safe_margin = 0.04
 script = ExtResource("1_a7tnr")
-spriteStickman = NodePath("Sprite2D")
+spriteStickman = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=491625580]
 visible = false
 position = Vector2(-4, 0.5)
 shape = SubResource("RectangleShape2D_a7tnr")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=651148033]
-texture = ExtResource("1_nl6ku")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=140643792]
+sprite_frames = SubResource("SpriteFrames_ukwr7")
+autoplay = "default"

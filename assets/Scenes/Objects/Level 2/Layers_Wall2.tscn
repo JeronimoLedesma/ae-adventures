@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cka0b17pxm3mr"]
+
+[ext_resource type="Script" uid="uid://cnw43w3c3pfin" path="res://assets/scripts/wall.gd" id="1_65w8j"]
+[ext_resource type="Texture2D" uid="uid://dnmeljn5v3rdk" path="res://assets/sprites/Level2/Pared 2 - L2 - A.png" id="2_65w8j"]
+[ext_resource type="Texture2D" uid="uid://boelfokcqi16u" path="res://assets/sprites/Level2/Pared 2 - L2 - B.png" id="3_65w8j"]
+[ext_resource type="Texture2D" uid="uid://2eajhxxnyesa" path="res://assets/sprites/Level2/Pared 2 - L2 - C.png" id="4_3wlnx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18c8o"]
+size = Vector2(420, 739)
+
+[node name="Node2D" type="Node2D" unique_id=1367497213 node_paths=PackedStringArray("full", "mask", "inverted", "full_collision", "mask_collision", "inverted_collision")]
+scale = Vector2(0.87999994, 1)
+script = ExtResource("1_65w8j")
+visible_full = true
+full = NodePath("Wall/Full")
+mask = NodePath("Wall/Mask")
+inverted = NodePath("Wall/Inverted")
+full_collision = NodePath("Wall/FullCollision")
+mask_collision = NodePath("Wall/MaskCollision")
+inverted_collision = NodePath("Wall/InvertedCollision")
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=360763863]
+
+[node name="Full" type="Sprite2D" parent="Wall" unique_id=733697231]
+texture = ExtResource("2_65w8j")
+
+[node name="Mask" type="Sprite2D" parent="Wall" unique_id=1330926084]
+visible = false
+texture = ExtResource("3_65w8j")
+
+[node name="Inverted" type="Sprite2D" parent="Wall" unique_id=740074628]
+visible = false
+texture = ExtResource("4_3wlnx")
+
+[node name="FullCollision" type="CollisionShape2D" parent="Wall" unique_id=1296995104]
+visible = false
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_18c8o")
+
+[node name="MaskCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1301042776]
+visible = false
+scale = Vector2(0.6454727, 0.67352474)
+polygon = PackedVector2Array(-325.34296, -550.8335, 320.6952, -549.34875, 325.34296, 8.908359, 320.6952, 348.9107, -333.0892, 351.88016)
+disabled = true
+
+[node name="InvertedCollision" type="CollisionPolygon2D" parent="Wall" unique_id=2024017732]
+visible = false
+position = Vector2(-144, 49)
+scale = Vector2(0.84065485, 0.84065485)
+polygon = PackedVector2Array(-83.26843, 224.82474, 419.91074, 384.22427, 422.28986, 226.01428)
+disabled = true
