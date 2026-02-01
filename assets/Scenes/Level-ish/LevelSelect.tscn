@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://buliguyjc7bmk"]
 
+[ext_resource type="Script" uid="uid://dolgembf77syn" path="res://assets/scripts/unhide.gd" id="1_8ohag"]
 [ext_resource type="Texture2D" uid="uid://4jfiobpdv8wt" path="res://assets/sprites/UI/UI-Estructura-Pantalla-01.jpg" id="1_g5spw"]
 [ext_resource type="Theme" uid="uid://b52ybk3bln0d4" path="res://assets/UI_theme.tres" id="2_nvnmc"]
 [ext_resource type="Texture2D" uid="uid://dnct8cju8non7" path="res://assets/sprites/UI/Composicion_Icono.png" id="3_meym1"]
@@ -7,11 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://diqx60uhy4xrn" path="res://assets/Scenes/Level-ish/Level1.tscn" id="5_g5spw"]
 [ext_resource type="PackedScene" uid="uid://coqnxarvuvm8" path="res://assets/Scenes/Level-ish/Level2.tscn" id="7_8fpm6"]
 [ext_resource type="PackedScene" uid="uid://bk4dk1s65nj6" path="res://assets/Scenes/Level-ish/Level3.tscn" id="8_8ohag"]
+[ext_resource type="PackedScene" uid="uid://5q6y5afk6oov" path="res://assets/Scenes/Level-ish/Level4.tscn" id="9_8fpm6"]
 [ext_resource type="Script" uid="uid://v5xqp2kmgwi4" path="res://assets/scripts/QuitButton.gd" id="10_7mnry"]
 [ext_resource type="Texture2D" uid="uid://cmqnn6m1fnhn2" path="res://assets/sprites/UI/Candado.png" id="10_colby"]
-[ext_resource type="PackedScene" uid="uid://d3q0s1a0b86sg" path="res://assets/Scenes/Objects/All Levels/Door.tscn" id="18_uhlss"]
 
 [node name="Node2D" type="Node2D" unique_id=5663288]
+script = ExtResource("1_8ohag")
 
 [node name="UI" type="Control" parent="." unique_id=2131463720]
 layout_mode = 3
@@ -29,7 +31,7 @@ offset_left = 8.0
 offset_top = 143.00003
 offset_right = 814.1159
 offset_bottom = 587.0
-scale = Vector2(0.63018227, 0.63018227)
+scale = Vector2(0.5520411, 0.5520411)
 theme = ExtResource("2_nvnmc")
 
 [node name="Object1" type="HBoxContainer" parent="UI/Buttons" unique_id=1526012969]
@@ -98,7 +100,7 @@ icon = ExtResource("3_meym1")
 script = ExtResource("4_vgp2n")
 level = 3
 lock = NodePath("../Lock 4")
-scene = ExtResource("18_uhlss")
+scene = ExtResource("9_8fpm6")
 
 [node name="Lock 4" type="Button" parent="UI/Buttons/Object4" unique_id=587705275]
 layout_mode = 2

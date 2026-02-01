@@ -36,13 +36,13 @@ visible = false
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_18c8o")
 
-[node name="MaskCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1301042776 node_paths=PackedStringArray("partner")]
+[node name="MaskCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1301042776 node_paths=PackedStringArray("partners")]
 visible = false
 scale = Vector2(0.6454727, 0.67352474)
 polygon = PackedVector2Array(1118.56, 335.5482, 1120.1093, -87.59886, -171.967, -89.08359, -613.50385, 337.0329)
 disabled = true
 script = ExtResource("5_gu1cg")
-partner = NodePath("../MaskCollision2")
+partners = [NodePath("../MaskCollision2")]
 
 [node name="MaskCollision2" type="CollisionPolygon2D" parent="Wall" unique_id=702288818]
 visible = false

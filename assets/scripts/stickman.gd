@@ -11,6 +11,7 @@ var direction = 1
 @export var deathplane: Area2D
 @export var deathAlert: Sprite2D
 @onready var has_key: bool = false
+@onready var stop = false
 func _ready():
 	floor_max_angle = deg_to_rad(70)
 	floor_stop_on_slope = false
@@ -20,18 +21,20 @@ func _ready():
 	deathplane.body_entered.connect(_on_die)
 
 func _physics_process(delta):
-	if not is_on_floor():
-		velocity.y += GRAVITY * delta
-	else:
-		velocity.y = 0
+	if not stop:
+		if not is_on_floor():
+			velocity.y += GRAVITY * delta
+		else:
+			velocity.y = 0
 	
-	velocity.x = direction * SPEED
+		velocity.x = direction * SPEED
 	
-	move_and_slide()
+		move_and_slide()
 	
-	if is_on_wall():
-		direction *= -1
-		spriteStickman.flip_h = !spriteStickman.flip_h
+		if is_on_wall():
+			direction *= -1
+			spriteStickman.flip_h = !spriteStickman.flip_h
+	
 
 func _on_key_get(body: CharacterBody2D):
 	if body == self:
@@ -40,9 +43,10 @@ func _on_key_get(body: CharacterBody2D):
 		key.queue_free()
 	
 func _on_die(body: CharacterBody2D):
-	deathAlert.visible = true
-	await wait(2)
-	get_tree().reload_current_scene()
+	if not stop:
+		deathAlert.visible = true
+		await wait(2)
+		get_tree().reload_current_scene()
 
 func wait(seconds):
 	await get_tree().create_timer(seconds).timeout
@@ -53,6 +57,13 @@ func increase_speed():
 
 func decrease_speed():
 	SPEED = SPEED/2
+
+func gg():
+	stop = true
+	spriteStickman.play("GG")
+	await wait(3)
+	Music.bgm_stop()
+	get_tree().change_scene_to_file("res://assets/Scenes/Level-ish/cinematic2.tscn")
 
 func _on_door_enter(body: CharacterBody2D):
 	if has_key && (body == self):

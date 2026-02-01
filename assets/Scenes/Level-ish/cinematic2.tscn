@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://7rjlufbsb7y2"]
+
+[ext_resource type="Script" uid="uid://nkwna0rqn2k" path="res://assets/scripts/cinematic_1.gd" id="1_4e0xx"]
+[ext_resource type="VideoStream" uid="uid://n7vg3bdvvmh6" path="res://assets/AE Adventure - ANIMACIÓN FINAL.ogv" id="2_4e0xx"]
+[ext_resource type="PackedScene" uid="uid://bthhxw1fo8igh" path="res://assets/Scenes/Level-ish/MainMenu.tscn" id="2_ilqom"]
+
+[node name="Node2D" type="Node2D" unique_id=715826005]
+script = ExtResource("1_4e0xx")
+scene = ExtResource("2_ilqom")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1226865185]
+offset_left = -955.0
+offset_top = -541.0
+offset_right = 965.0
+offset_bottom = 539.0
+stream = ExtResource("2_4e0xx")
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=947843260]
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

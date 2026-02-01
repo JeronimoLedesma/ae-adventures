@@ -1,7 +1,32 @@
 [gd_scene format=3 uid="uid://dciaeb8w6tgec"]
 
-[ext_resource type="Texture2D" uid="uid://cgigs38qehh11" path="res://assets/sprites/img_01.webp" id="1_dsbth"]
+[ext_resource type="Texture2D" uid="uid://grnf3gyawg2y" path="res://assets/sprites/Capusotto fium/capusotto pum 1 sim fomdo.png" id="1_aldpw"]
 [ext_resource type="Script" uid="uid://ctevbwrioopfm" path="res://assets/scripts/Close_popup.gd" id="2_32era"]
+[ext_resource type="Texture2D" uid="uid://bh1s77mxhae1d" path="res://assets/sprites/Capusotto fium/capusotto pum 2 sim fomdo.png" id="2_tmek0"]
+[ext_resource type="Texture2D" uid="uid://voexid4j418y" path="res://assets/sprites/Capusotto fium/capusotto pum 3 sim fomdo.png" id="3_u48u3"]
+[ext_resource type="Texture2D" uid="uid://dx8jqornby3wy" path="res://assets/sprites/Capusotto fium/capusotto pum 4 sim fomdo.png" id="4_ewtc8"]
+[ext_resource type="Texture2D" uid="uid://n3s8nvordt7a" path="res://assets/sprites/6583137.png" id="5_u48u3"]
+[ext_resource type="Texture2D" uid="uid://dyuv363oqyxub" path="res://assets/sprites/a-white-cross-symbol-on-a-glossy-red-square-button-indicating-cancellation-or-error-isolated-on-transparent-background-free-png.png" id="6_ewtc8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d7kgr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_aldpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tmek0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u48u3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ewtc8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 13.0
+}]
 
 [node name="Control" type="Control" unique_id=1731765334]
 layout_mode = 3
@@ -11,21 +36,28 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1058067566]
-layout_mode = 0
-offset_left = 784.0
-offset_top = 84.0
-offset_right = 1752.8074
-offset_bottom = 876.0
-mouse_filter = 0
-texture = ExtResource("1_dsbth")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=846118567]
+position = Vector2(1056, 471)
+scale = Vector2(0.91505086, 0.91505086)
+sprite_frames = SubResource("SpriteFrames_d7kgr")
+autoplay = "default"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1412043629]
+position = Vector2(933.5376, 134.5376)
+scale = Vector2(0.19741252, 0.19741252)
+texture = ExtResource("5_u48u3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1362153382]
+position = Vector2(1467.9999, 106)
+scale = Vector2(0.66202706, 0.66202706)
+texture = ExtResource("6_ewtc8")
 
 [node name="Button" type="Button" parent="." unique_id=204937716]
 layout_mode = 0
-offset_left = 1658.0
-offset_top = 144.0
-offset_right = 1677.0
-offset_bottom = 160.0
+offset_left = 905.53754
+offset_top = 111.537605
+offset_right = 938.87286
+offset_bottom = 144.20627
 scale = Vector2(1.4999084, 1.4999084)
 theme_override_font_sizes/font_size = 50
 script = ExtResource("2_32era")

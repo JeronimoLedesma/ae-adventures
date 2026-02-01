@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://dkke4qallpgq2"]
+[gd_scene format=3 uid="uid://cqns4ipxmw8rq"]
 
-[ext_resource type="Script" uid="uid://cnw43w3c3pfin" path="res://assets/scripts/wall.gd" id="1_es36o"]
-[ext_resource type="Texture2D" uid="uid://ydtpbncks0f" path="res://assets/sprites/Nivel 3/Pared 2 - L3 - A.png" id="2_gmauw"]
-[ext_resource type="Texture2D" uid="uid://scmo605rr6vx" path="res://assets/sprites/Nivel 3/Pared 2 - L3 - B.png" id="3_d2ocr"]
-[ext_resource type="Texture2D" uid="uid://dnkdtvw0mtdvf" path="res://assets/sprites/Nivel 3/Pared 2 - L3 - C.png" id="4_gmauw"]
-[ext_resource type="Script" uid="uid://ciljdqflvhar3" path="res://assets/scripts/DobleCollisionActivation.gd" id="5_36b8j"]
+[ext_resource type="Script" uid="uid://cnw43w3c3pfin" path="res://assets/scripts/wall.gd" id="1_dk1wa"]
+[ext_resource type="Texture2D" uid="uid://ydtpbncks0f" path="res://assets/sprites/Nivel 3/Pared 2 - L3 - A.png" id="2_ujwoe"]
+[ext_resource type="Texture2D" uid="uid://scmo605rr6vx" path="res://assets/sprites/Nivel 3/Pared 2 - L3 - B.png" id="3_a44x6"]
+[ext_resource type="Texture2D" uid="uid://dnkdtvw0mtdvf" path="res://assets/sprites/Nivel 3/Pared 2 - L3 - C.png" id="4_fyjlu"]
+[ext_resource type="Script" uid="uid://ciljdqflvhar3" path="res://assets/scripts/DobleCollisionActivation.gd" id="5_ft0nn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18c8o"]
 size = Vector2(1170, 672)
 
 [node name="Node2D" type="Node2D" unique_id=1367497213 node_paths=PackedStringArray("full", "mask", "inverted", "full_collision", "mask_collision", "inverted_collision")]
-script = ExtResource("1_es36o")
+script = ExtResource("1_dk1wa")
 full = NodePath("Wall/Full")
 mask = NodePath("Wall/Mask")
 inverted = NodePath("Wall/Inverted")
@@ -21,28 +21,28 @@ inverted_collision = NodePath("Wall/InvertedCollision")
 [node name="Wall" type="StaticBody2D" parent="." unique_id=360763863]
 
 [node name="Full" type="Sprite2D" parent="Wall" unique_id=733697231]
-texture = ExtResource("2_gmauw")
+texture = ExtResource("2_ujwoe")
 
 [node name="Mask" type="Sprite2D" parent="Wall" unique_id=1330926084]
 visible = false
-texture = ExtResource("3_d2ocr")
+texture = ExtResource("3_a44x6")
 
 [node name="Inverted" type="Sprite2D" parent="Wall" unique_id=740074628]
 visible = false
-texture = ExtResource("4_gmauw")
+texture = ExtResource("4_fyjlu")
 
 [node name="FullCollision" type="CollisionShape2D" parent="Wall" unique_id=1296995104]
 visible = false
 position = Vector2(-1, -1)
 shape = SubResource("RectangleShape2D_18c8o")
 
-[node name="MaskCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1301042776 node_paths=PackedStringArray("partner")]
+[node name="MaskCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1301042776 node_paths=PackedStringArray("partners")]
 visible = false
 scale = Vector2(0.6454727, 0.67352474)
 polygon = PackedVector2Array(-906.3125, -403.84558, -907.86176, -500.3528, 903.214, -497.38336, 901.66473, 467.6888, 202.95203, -197.46861, -655.3337, -200.43806, -655.3337, -397.90668)
 disabled = true
-script = ExtResource("5_36b8j")
-partner = NodePath("../MaskCollision2")
+script = ExtResource("5_ft0nn")
+partners = [NodePath("../MaskCollision2")]
 
 [node name="MaskCollision2" type="CollisionPolygon2D" parent="Wall" unique_id=702288818]
 visible = false

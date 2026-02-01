@@ -35,7 +35,6 @@ visible = false
 shape = SubResource("RectangleShape2D_18c8o")
 
 [node name="MaskCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1301042776]
-visible = false
 scale = Vector2(0.6454727, 0.67352474)
 polygon = PackedVector2Array(-647.5874, -354.8496, 139.4327, -360.7885, 646.03815, 129.1712, 649.13666, 353.3649, -642.93964, 350.39545)
 disabled = true

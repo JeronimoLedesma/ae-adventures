@@ -209,7 +209,7 @@ offset_left = 8.0
 offset_top = 143.00003
 offset_right = 814.1159
 offset_bottom = 587.0
-scale = Vector2(0.63018227, 0.63018227)
+scale = Vector2(0.55558366, 0.55558366)
 theme = ExtResource("9_jb4np")
 
 [node name="Object1" type="HBoxContainer" parent="UI/Buttons2" unique_id=1086780073]

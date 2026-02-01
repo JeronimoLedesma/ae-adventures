@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://bthhxw1fo8igh"]
 
+[ext_resource type="Script" uid="uid://dolgembf77syn" path="res://assets/scripts/unhide.gd" id="1_qonme"]
 [ext_resource type="Theme" uid="uid://b52ybk3bln0d4" path="res://assets/UI_theme.tres" id="2_uxrh4"]
 [ext_resource type="Texture2D" uid="uid://dv7ta26qnkrxy" path="res://assets/StickMan-GigaChad.png" id="2_xl453"]
 [ext_resource type="Script" uid="uid://dllgvl3v0xblq" path="res://assets/scripts/StartButton.gd" id="3_xl453"]
 [ext_resource type="Script" uid="uid://v5xqp2kmgwi4" path="res://assets/scripts/QuitButton.gd" id="4_uxrh4"]
 [ext_resource type="VideoStream" uid="uid://dfuo1ttnjnbws" path="res://assets/AE-Adventure-PANTALLA-DE-TITULO.ogv" id="5_xl453"]
+[ext_resource type="PackedScene" uid="uid://buliguyjc7bmk" path="res://assets/Scenes/Level-ish/LevelSelect.tscn" id="6_8b1g1"]
+[ext_resource type="AudioStream" uid="uid://begbgu40hlt8j" path="res://assets/AE Adventure Pantalla de inicio.wav" id="6_8yv8y"]
+[ext_resource type="PackedScene" uid="uid://gbxshycm5k3n" path="res://assets/Scenes/credits.tscn" id="8_yafl5"]
 
 [node name="Node2D" type="Node2D" unique_id=1796401391]
+script = ExtResource("1_qonme")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1076208822]
 offset_right = 1920.0
@@ -33,6 +38,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Start or sumething"
 script = ExtResource("3_xl453")
+scene = ExtResource("6_8b1g1")
 
 [node name="Button2" type="Button" parent="VBoxContainer" unique_id=1154206668]
 layout_mode = 2
@@ -40,5 +46,17 @@ theme_override_font_sizes/font_size = 50
 text = "Exit or sumother"
 script = ExtResource("4_uxrh4")
 
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=911882564]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Credits or whatevah"
+script = ExtResource("3_xl453")
+scene = ExtResource("8_yafl5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=243647011]
+stream = ExtResource("6_8yv8y")
+autoplay = true
+
 [connection signal="button_down" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_button_down"]
 [connection signal="button_down" from="VBoxContainer/Button2" to="VBoxContainer/Button2" method="_on_button_down"]
+[connection signal="button_down" from="VBoxContainer/Button3" to="VBoxContainer/Button3" method="_on_button_down"]

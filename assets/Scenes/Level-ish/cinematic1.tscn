@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://nkwna0rqn2k" path="res://assets/scripts/cinematic_1.gd" id="1_p32ss"]
 [ext_resource type="VideoStream" uid="uid://63y5lmuejn6r" path="res://assets/AE-Adventure-INTRO.ogv" id="2_p32ss"]
+[ext_resource type="PackedScene" uid="uid://buliguyjc7bmk" path="res://assets/Scenes/Level-ish/LevelSelect.tscn" id="2_rf68s"]
 
 [node name="Node2D" type="Node2D" unique_id=715826005]
 script = ExtResource("1_p32ss")
+scene = ExtResource("2_rf68s")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1226865185]
 offset_left = -955.0

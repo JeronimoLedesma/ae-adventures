@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://n3h8dhnusdwl" path="res://assets/Scenes/stickman.tscn" id="22_dnx66"]
 [ext_resource type="Texture2D" uid="uid://dpa24lhcrcn8e" path="res://assets/sprites/UI/Sample_Error_Message.webp" id="23_2j8a1"]
 [ext_resource type="Texture2D" uid="uid://bu5spev500hsv" path="res://assets/sprites/Nivel 3/Piso - L3.png" id="24_51u55"]
-[ext_resource type="PackedScene" uid="uid://dkke4qallpgq2" path="res://assets/Scenes/Objects/Level 3/Layers_Walls.tscn" id="25_51u55"]
+[ext_resource type="PackedScene" uid="uid://cqns4ipxmw8rq" path="res://assets/Scenes/Objects/Level 3/Layers_Wall.tscn" id="25_mse5l"]
 [ext_resource type="PackedScene" uid="uid://f63ewahdcpht" path="res://assets/Scenes/Objects/Level 3/Layers_Walls2.tscn" id="26_a3uog"]
 [ext_resource type="PackedScene" uid="uid://dk1jd7vjfki1b" path="res://assets/Scenes/Objects/Level 3/Layers_Walls3.tscn" id="27_7ihjj"]
 [ext_resource type="PackedScene" uid="uid://cw6folxyuh47" path="res://assets/Scenes/Objects/Level 3/Layers_Walls4.tscn" id="28_mse5l"]
@@ -293,7 +293,7 @@ offset_left = 8.0
 offset_top = 143.00003
 offset_right = 814.1159
 offset_bottom = 587.0
-scale = Vector2(0.63018227, 0.63018227)
+scale = Vector2(0.5503484, 0.5503484)
 theme = ExtResource("3_wslb6")
 
 [node name="Object1" type="HBoxContainer" parent="UI/Buttons2" unique_id=1086780073]
@@ -346,7 +346,6 @@ icon = ExtResource("12_k30o0")
 script = ExtResource("13_ro1js")
 level = 2
 lock = NodePath("../Lock 3")
-scene = null
 
 [node name="Lock 3" type="Button" parent="UI/Buttons2/Object3" unique_id=1395735014]
 layout_mode = 2
@@ -484,8 +483,8 @@ shape = SubResource("RectangleShape2D_o7own")
 position = Vector2(1134.4283, 1023.1522)
 shape = SubResource("RectangleShape2D_a3uog")
 
-[node name="Node2D" parent="Game" unique_id=1367497213 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("25_51u55")]
-position = Vector2(1069.3431, 624.6377)
+[node name="Wall1" parent="Game" unique_id=1367497213 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("25_mse5l")]
+position = Vector2(1072.9924, 626.087)
 scale = Vector2(0.839416, 1)
 button_visible_path = NodePath("../../UI/Buttons/Object1/HBoxContainer/Visible")
 button_mask = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Mask")

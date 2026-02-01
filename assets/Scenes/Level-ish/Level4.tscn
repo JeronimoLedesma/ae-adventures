@@ -1,0 +1,629 @@
+[gd_scene format=3 uid="uid://5q6y5afk6oov"]
+
+[ext_resource type="Script" uid="uid://b3al0rufd3s65" path="res://assets/scripts/Music_Play.gd" id="1_t5bx6"]
+[ext_resource type="Texture2D" uid="uid://4jfiobpdv8wt" path="res://assets/sprites/UI/UI-Estructura-Pantalla-01.jpg" id="2_twvxl"]
+[ext_resource type="Theme" uid="uid://b52ybk3bln0d4" path="res://assets/UI_theme.tres" id="3_ows7i"]
+[ext_resource type="Texture2D" uid="uid://xs075ehiir0i" path="res://assets/sprites/UI/Capa - Apagado.jpg" id="4_6jw4k"]
+[ext_resource type="Script" uid="uid://dllhpmieg5uvt" path="res://assets/scripts/visible_button.gd" id="5_tavc7"]
+[ext_resource type="Texture2D" uid="uid://dgjntge4u28lq" path="res://assets/sprites/UI/Capa - Prendido.jpg" id="6_aojge"]
+[ext_resource type="Texture2D" uid="uid://cq36bfc6havli" path="res://assets/sprites/UI/Mascara - Apagado.jpg" id="7_hxgnl"]
+[ext_resource type="Texture2D" uid="uid://cq2riwk06yr27" path="res://assets/sprites/UI/Mascara - Prendido.jpg" id="8_wv3ui"]
+[ext_resource type="Texture2D" uid="uid://dkgx0f3f31iv2" path="res://assets/sprites/UI/Inversion - 1.jpg" id="9_36ipj"]
+[ext_resource type="Texture2D" uid="uid://bid45bwn86uar" path="res://assets/sprites/UI/Inversion - 2.jpg" id="10_m1jje"]
+[ext_resource type="Texture2D" uid="uid://cmqnn6m1fnhn2" path="res://assets/sprites/UI/Candado.png" id="11_nh3e2"]
+[ext_resource type="Texture2D" uid="uid://dnct8cju8non7" path="res://assets/sprites/UI/Composicion_Icono.png" id="12_liaks"]
+[ext_resource type="Script" uid="uid://3fg005ebrvwy" path="res://assets/scripts/Level_Button.gd" id="13_2fhsr"]
+[ext_resource type="PackedScene" uid="uid://diqx60uhy4xrn" path="res://assets/Scenes/Level-ish/Level1.tscn" id="14_kbk66"]
+[ext_resource type="PackedScene" uid="uid://coqnxarvuvm8" path="res://assets/Scenes/Level-ish/Level2.tscn" id="15_jxaw2"]
+[ext_resource type="PackedScene" uid="uid://bk4dk1s65nj6" path="res://assets/Scenes/Level-ish/Level3.tscn" id="16_ndsgu"]
+[ext_resource type="PackedScene" uid="uid://d3q0s1a0b86sg" path="res://assets/Scenes/Objects/All Levels/Door.tscn" id="17_key7u"]
+[ext_resource type="Script" uid="uid://b0ak687cflfy1" path="res://assets/scripts/timer_bar.gd" id="18_mmsc4"]
+[ext_resource type="Script" uid="uid://v5xqp2kmgwi4" path="res://assets/scripts/QuitButton.gd" id="19_p0r2t"]
+[ext_resource type="Texture2D" uid="uid://bt6k7j1lkndyi" path="res://assets/sprites/Level1/Fondo.jpg" id="20_s41ck"]
+[ext_resource type="Texture2D" uid="uid://h281wp8xih2g" path="res://assets/sprites/Nivel 4/Piso_Flotante.png" id="21_6jw4k"]
+[ext_resource type="PackedScene" uid="uid://feog4n3qpmn7" path="res://assets/Scenes/Objects/All Levels/Key.tscn" id="22_g2eph"]
+[ext_resource type="Script" uid="uid://dger2e07g1so2" path="res://assets/scripts/doorFinal.gd" id="23_6jw4k"]
+[ext_resource type="PackedScene" uid="uid://n3h8dhnusdwl" path="res://assets/Scenes/stickman.tscn" id="23_rh58m"]
+[ext_resource type="Texture2D" uid="uid://dpa24lhcrcn8e" path="res://assets/sprites/UI/Sample_Error_Message.webp" id="24_pgif8"]
+[ext_resource type="Texture2D" uid="uid://ci45jubta8pvu" path="res://assets/sprites/Level1/Piso.png" id="25_ows7i"]
+[ext_resource type="PackedScene" uid="uid://dkke4qallpgq2" path="res://assets/Scenes/Objects/Level 4/Layers_Walls.tscn" id="26_np45m"]
+[ext_resource type="PackedScene" uid="uid://bc2njrpmq5oc4" path="res://assets/Scenes/Objects/Level 4/Layers_Walls2.tscn" id="27_bnu1n"]
+[ext_resource type="PackedScene" uid="uid://c2f8bsnaxp3sx" path="res://assets/Scenes/Objects/Level 4/Layers_Walls3.tscn" id="28_6jw4k"]
+[ext_resource type="PackedScene" uid="uid://cc0s0qb8d84re" path="res://assets/Scenes/Objects/Level 4/Layers_Walls4.tscn" id="29_tavc7"]
+[ext_resource type="PackedScene" uid="uid://cbxvtl206nibc" path="res://assets/Scenes/Objects/Level 4/Layers_Walls5.tscn" id="30_aojge"]
+[ext_resource type="Script" uid="uid://d2ifk2amgms3d" path="res://assets/scripts/annoyance.gd" id="30_c6h6h"]
+[ext_resource type="Texture2D" uid="uid://dhhkc0l3c3mw5" path="res://assets/sprites/Nivel 4/Paredes bloqueadas 1.png" id="32_hxgnl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jb4np"]
+size = Vector2(102, 1085)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vumt6"]
+size = Vector2(1602.1897, 104.203)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wv3ui"]
+size = Vector2(71, 182)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36ipj"]
+size = Vector2(83, 231)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xl8hg"]
+size = Vector2(1412.4087, 126.08688)
+
+[node name="Node2D" type="Node2D" unique_id=5663288]
+script = ExtResource("1_t5bx6")
+
+[node name="UI" type="Control" parent="." unique_id=2131463720]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UiEstructuraPantalla00" type="Sprite2D" parent="UI" unique_id=907392600]
+position = Vector2(967, 539)
+texture = ExtResource("2_twvxl")
+
+[node name="Buttons" type="VBoxContainer" parent="UI" unique_id=171285836]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 492.0
+offset_right = 814.1159
+offset_bottom = 712.0
+scale = Vector2(0.63018227, 0.63018227)
+theme = ExtResource("3_ows7i")
+
+[node name="Object1" type="HBoxContainer" parent="UI/Buttons" unique_id=1526012969]
+layout_mode = 2
+theme = ExtResource("3_ows7i")
+theme_override_constants/separation = 175
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object1" unique_id=1050632266]
+layout_mode = 2
+
+[node name="Visible" type="Button" parent="UI/Buttons/Object1/HBoxContainer" unique_id=914937908]
+layout_mode = 2
+icon = ExtResource("4_6jw4k")
+flat = true
+script = ExtResource("5_tavc7")
+toggle = true
+toggled_button = ExtResource("6_aojge")
+untoggled_button = ExtResource("4_6jw4k")
+
+[node name="Label" type="Label" parent="UI/Buttons/Object1/HBoxContainer" unique_id=632744941]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Sueño"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object1" unique_id=2110281575]
+layout_mode = 2
+
+[node name="Mask" type="Button" parent="UI/Buttons/Object1/HBoxContainer2" unique_id=1157997335]
+layout_mode = 2
+icon = ExtResource("7_hxgnl")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("8_wv3ui")
+untoggled_button = ExtResource("7_hxgnl")
+
+[node name="Invert" type="Button" parent="UI/Buttons/Object1/HBoxContainer2" unique_id=59150145]
+layout_mode = 2
+icon = ExtResource("9_36ipj")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("10_m1jje")
+untoggled_button = ExtResource("9_36ipj")
+
+[node name="Object2" type="HBoxContainer" parent="UI/Buttons" unique_id=2127301733]
+layout_mode = 2
+theme_override_constants/separation = 83
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object2" unique_id=1058181272]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/Buttons/Object2/HBoxContainer" unique_id=518346251]
+layout_mode = 2
+icon = ExtResource("4_6jw4k")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("6_aojge")
+untoggled_button = ExtResource("4_6jw4k")
+
+[node name="Label2" type="Label" parent="UI/Buttons/Object2/HBoxContainer" unique_id=1266888372]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Matenme"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object2" unique_id=122322500]
+layout_mode = 2
+
+[node name="Mask" type="Button" parent="UI/Buttons/Object2/HBoxContainer2" unique_id=1691879933]
+layout_mode = 2
+icon = ExtResource("7_hxgnl")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("8_wv3ui")
+untoggled_button = ExtResource("7_hxgnl")
+
+[node name="Invert" type="Button" parent="UI/Buttons/Object2/HBoxContainer2" unique_id=336531364]
+layout_mode = 2
+icon = ExtResource("9_36ipj")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("10_m1jje")
+untoggled_button = ExtResource("9_36ipj")
+
+[node name="Object5" type="HBoxContainer" parent="UI/Buttons" unique_id=1669289049]
+layout_mode = 2
+theme_override_constants/separation = 256
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object5" unique_id=712997320]
+layout_mode = 2
+
+[node name="Visible" type="Button" parent="UI/Buttons/Object5/HBoxContainer" unique_id=2015273250]
+layout_mode = 2
+icon = ExtResource("6_aojge")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("6_aojge")
+untoggled_button = ExtResource("4_6jw4k")
+
+[node name="Label2" type="Label" parent="UI/Buttons/Object5/HBoxContainer" unique_id=810276577]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Por"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object5" unique_id=2141629900]
+layout_mode = 2
+
+[node name="Mask" type="Button" parent="UI/Buttons/Object5/HBoxContainer2" unique_id=1174447220]
+layout_mode = 2
+icon = ExtResource("7_hxgnl")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("8_wv3ui")
+untoggled_button = ExtResource("7_hxgnl")
+
+[node name="Invert" type="Button" parent="UI/Buttons/Object5/HBoxContainer2" unique_id=1836430016]
+layout_mode = 2
+icon = ExtResource("9_36ipj")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("10_m1jje")
+untoggled_button = ExtResource("9_36ipj")
+
+[node name="Object6" type="HBoxContainer" parent="UI/Buttons" unique_id=2133051747]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object6" unique_id=302792556]
+layout_mode = 2
+
+[node name="Visible" type="Button" parent="UI/Buttons/Object6/HBoxContainer" unique_id=639521460]
+layout_mode = 2
+icon = ExtResource("6_aojge")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("6_aojge")
+untoggled_button = ExtResource("4_6jw4k")
+
+[node name="Label2" type="Label" parent="UI/Buttons/Object6/HBoxContainer" unique_id=1490369281]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Favor"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object6" unique_id=164650997]
+layout_mode = 2
+
+[node name="Mask" type="Button" parent="UI/Buttons/Object6/HBoxContainer2" unique_id=1025427296]
+layout_mode = 2
+icon = ExtResource("7_hxgnl")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("8_wv3ui")
+untoggled_button = ExtResource("7_hxgnl")
+
+[node name="Invert" type="Button" parent="UI/Buttons/Object6/HBoxContainer2" unique_id=305923383]
+layout_mode = 2
+icon = ExtResource("9_36ipj")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("10_m1jje")
+untoggled_button = ExtResource("9_36ipj")
+
+[node name="Object8" type="HBoxContainer" parent="UI/Buttons" unique_id=1898373463]
+layout_mode = 2
+theme_override_constants/separation = 257
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object8" unique_id=235099794]
+layout_mode = 2
+
+[node name="Visible" type="Button" parent="UI/Buttons/Object8/HBoxContainer" unique_id=1350334646]
+layout_mode = 2
+icon = ExtResource("6_aojge")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("6_aojge")
+untoggled_button = ExtResource("4_6jw4k")
+
+[node name="Label2" type="Label" parent="UI/Buttons/Object8/HBoxContainer" unique_id=2042560063]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Plis"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object8" unique_id=330863613]
+layout_mode = 2
+
+[node name="Mask" type="Button" parent="UI/Buttons/Object8/HBoxContainer2" unique_id=92528728]
+layout_mode = 2
+icon = ExtResource("7_hxgnl")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("8_wv3ui")
+untoggled_button = ExtResource("7_hxgnl")
+
+[node name="Invert" type="Button" parent="UI/Buttons/Object8/HBoxContainer2" unique_id=1625096620]
+layout_mode = 2
+icon = ExtResource("9_36ipj")
+script = ExtResource("5_tavc7")
+toggled_button = ExtResource("10_m1jje")
+untoggled_button = ExtResource("9_36ipj")
+
+[node name="Object3" type="HBoxContainer" parent="UI/Buttons" unique_id=1677670410]
+layout_mode = 2
+theme_override_constants/separation = 237
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object3" unique_id=2088326726]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/Buttons/Object3/HBoxContainer" unique_id=1140558950]
+layout_mode = 2
+disabled = true
+icon = ExtResource("6_aojge")
+
+[node name="Label2" type="Label" parent="UI/Buttons/Object3/HBoxContainer" unique_id=1329536943]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.48178947, 0.48178947, 0.48178947, 1)
+theme_override_font_sizes/font_size = 60
+text = "Piso"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object3" unique_id=1559901623]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/Buttons/Object3/HBoxContainer2" unique_id=853777522]
+layout_mode = 2
+disabled = true
+icon = ExtResource("7_hxgnl")
+
+[node name="Button2" type="Button" parent="UI/Buttons/Object3/HBoxContainer2" unique_id=917566664]
+layout_mode = 2
+disabled = true
+icon = ExtResource("9_36ipj")
+
+[node name="Button3" type="Button" parent="UI/Buttons/Object3/HBoxContainer2" unique_id=663144041]
+layout_mode = 2
+disabled = true
+icon = ExtResource("11_nh3e2")
+
+[node name="Object4" type="HBoxContainer" parent="UI/Buttons" unique_id=2100711568]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object4" unique_id=1331772168]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/Buttons/Object4/HBoxContainer" unique_id=190430106]
+layout_mode = 2
+disabled = true
+icon = ExtResource("6_aojge")
+
+[node name="Label2" type="Label" parent="UI/Buttons/Object4/HBoxContainer" unique_id=1327622115]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_font_sizes/font_size = 60
+text = "Piso Elevado"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object4" unique_id=1311847975]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/Buttons/Object4/HBoxContainer2" unique_id=550799123]
+layout_mode = 2
+disabled = true
+icon = ExtResource("7_hxgnl")
+
+[node name="Button2" type="Button" parent="UI/Buttons/Object4/HBoxContainer2" unique_id=1306080265]
+layout_mode = 2
+disabled = true
+icon = ExtResource("9_36ipj")
+
+[node name="Button3" type="Button" parent="UI/Buttons/Object4/HBoxContainer2" unique_id=587705275]
+layout_mode = 2
+disabled = true
+icon = ExtResource("11_nh3e2")
+
+[node name="Object7" type="HBoxContainer" parent="UI/Buttons" unique_id=2334655]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object7" unique_id=871394710]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/Buttons/Object7/HBoxContainer" unique_id=1981796326]
+layout_mode = 2
+disabled = true
+icon = ExtResource("6_aojge")
+
+[node name="Label2" type="Label" parent="UI/Buttons/Object7/HBoxContainer" unique_id=1394125402]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_font_sizes/font_size = 60
+text = "ajkdshfkash"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object7" unique_id=221438756]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/Buttons/Object7/HBoxContainer2" unique_id=1271756801]
+layout_mode = 2
+disabled = true
+icon = ExtResource("7_hxgnl")
+
+[node name="Button2" type="Button" parent="UI/Buttons/Object7/HBoxContainer2" unique_id=85500044]
+layout_mode = 2
+disabled = true
+icon = ExtResource("9_36ipj")
+
+[node name="Button3" type="Button" parent="UI/Buttons/Object7/HBoxContainer2" unique_id=682392018]
+layout_mode = 2
+disabled = true
+icon = ExtResource("11_nh3e2")
+
+[node name="Buttons2" type="VBoxContainer" parent="UI" unique_id=1232925166]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 143.00003
+offset_right = 814.1159
+offset_bottom = 587.0
+scale = Vector2(0.5513777, 0.5513777)
+theme = ExtResource("3_ows7i")
+
+[node name="Object1" type="HBoxContainer" parent="UI/Buttons2" unique_id=1086780073]
+layout_mode = 2
+theme = ExtResource("3_ows7i")
+theme_override_constants/separation = 150
+
+[node name="Button 1" type="Button" parent="UI/Buttons2/Object1" unique_id=914228411 node_paths=PackedStringArray("lock")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Comp. 1"
+icon = ExtResource("12_liaks")
+script = ExtResource("13_2fhsr")
+lock = NodePath("../Lock 1")
+scene = ExtResource("14_kbk66")
+
+[node name="Lock 1" type="Button" parent="UI/Buttons2/Object1" unique_id=910589755]
+layout_mode = 2
+disabled = true
+icon = ExtResource("11_nh3e2")
+
+[node name="Object2" type="HBoxContainer" parent="UI/Buttons2" unique_id=1892238147]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="Button 2" type="Button" parent="UI/Buttons2/Object2" unique_id=1399093102 node_paths=PackedStringArray("lock")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Comp. 2"
+icon = ExtResource("12_liaks")
+script = ExtResource("13_2fhsr")
+level = 1
+lock = NodePath("../Lock 2")
+scene = ExtResource("15_jxaw2")
+
+[node name="Lock 2" type="Button" parent="UI/Buttons2/Object2" unique_id=671779971]
+layout_mode = 2
+disabled = true
+icon = ExtResource("11_nh3e2")
+
+[node name="Object3" type="HBoxContainer" parent="UI/Buttons2" unique_id=429321129]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Button 3" type="Button" parent="UI/Buttons2/Object3" unique_id=358076857 node_paths=PackedStringArray("lock")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Comp. Final"
+icon = ExtResource("12_liaks")
+script = ExtResource("13_2fhsr")
+level = 2
+lock = NodePath("../Lock 3")
+scene = ExtResource("16_ndsgu")
+
+[node name="Lock 3" type="Button" parent="UI/Buttons2/Object3" unique_id=1395735014]
+layout_mode = 2
+disabled = true
+icon = ExtResource("11_nh3e2")
+
+[node name="Object4" type="HBoxContainer" parent="UI/Buttons2" unique_id=2062351214]
+layout_mode = 2
+theme_override_constants/separation = 80
+
+[node name="Button 4" type="Button" parent="UI/Buttons2/Object4" unique_id=45787764 node_paths=PackedStringArray("lock")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "final ahora si"
+icon = ExtResource("12_liaks")
+script = ExtResource("13_2fhsr")
+level = 3
+lock = NodePath("../Lock 4")
+scene = ExtResource("17_key7u")
+
+[node name="Lock 4" type="Button" parent="UI/Buttons2/Object4" unique_id=725770701]
+layout_mode = 2
+disabled = true
+icon = ExtResource("11_nh3e2")
+
+[node name="ProgressBar" type="ProgressBar" parent="UI" unique_id=514564891]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 925.0
+offset_right = 1882.0
+offset_bottom = 1044.0
+max_value = 60.0
+step = 0.05
+show_percentage = false
+script = ExtResource("18_mmsc4")
+
+[node name="Timer" type="Timer" parent="UI/ProgressBar" unique_id=94666529]
+process_callback = 0
+wait_time = 0.05
+autostart = true
+
+[node name="Button2" type="Button" parent="UI" unique_id=1867423164]
+layout_mode = 0
+offset_left = 1870.0
+offset_right = 1911.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 50
+script = ExtResource("19_p0r2t")
+
+[node name="Game" type="Node2D" parent="." unique_id=1253256916]
+position = Vector2(310, 129)
+scale = Vector2(0.822, 0.69)
+
+[node name="Background" type="Node2D" parent="Game" unique_id=319861261]
+position = Vector2(1111, 540)
+scale = Vector2(0.84000003, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Background" unique_id=235513550]
+texture = ExtResource("20_s41ck")
+
+[node name="InvisibleWall" type="StaticBody2D" parent="Game" unique_id=744991550]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/InvisibleWall" unique_id=1237315419]
+visible = false
+position = Vector2(251, 533)
+shape = SubResource("RectangleShape2D_jb4np")
+
+[node name="InvisibleWall2" type="StaticBody2D" parent="Game" unique_id=1368354813]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/InvisibleWall2" unique_id=1504180876]
+visible = false
+position = Vector2(1968, 533)
+shape = SubResource("RectangleShape2D_jb4np")
+
+[node name="HigherFloor" type="StaticBody2D" parent="Game" unique_id=1229442394]
+position = Vector2(210.46228, -104.347824)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/HigherFloor" unique_id=129301006]
+position = Vector2(436.7397, 369.56522)
+scale = Vector2(0.84000003, 1)
+texture = ExtResource("21_6jw4k")
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Game/HigherFloor" unique_id=958182391]
+polygon = PackedVector2Array(301.70313, 305.7971, 563.2603, 302.89856, 574.20917, 314.49274, 572.9928, 423.18842, 304.13635, 423.18842)
+
+[node name="Key" parent="Game" unique_id=1585223162 instance=ExtResource("22_g2eph")]
+position = Vector2(1818.7349, 869.5652)
+scale = Vector2(0.63793993, 0.63793993)
+
+[node name="Door" parent="Game" unique_id=2132548742 instance=ExtResource("17_key7u")]
+position = Vector2(2757.9075, 163.76813)
+scale = Vector2(0.84, 0.84)
+
+[node name="Door2" parent="Game" unique_id=319823705 node_paths=PackedStringArray("timer1", "timer2") instance=ExtResource("17_key7u")]
+position = Vector2(644.7688, 95.6522)
+scale = Vector2(0.84, 0.84)
+script = ExtResource("23_6jw4k")
+timer1 = NodePath("../../UI/ProgressBar/Timer")
+timer2 = NodePath("../../Annoyance/Timer")
+
+[node name="Stickman" parent="Game" unique_id=564413360 node_paths=PackedStringArray("key", "door", "deathplane", "deathAlert") instance=ExtResource("23_rh58m")]
+position = Vector2(363.74695, 868.11597)
+SPEED = 300
+currentLevel = 3
+GRAVITY = 600
+key = NodePath("../Key")
+door = NodePath("../Door")
+deathplane = NodePath("../Death Plane")
+deathAlert = NodePath("../Death Alert")
+
+[node name="Death Plane" type="Area2D" parent="Game" unique_id=226954258]
+position = Vector2(0, -104.347824)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Death Plane" unique_id=405907504]
+visible = false
+position = Vector2(1110.0973, 1149.2029)
+shape = SubResource("RectangleShape2D_vumt6")
+
+[node name="Death Alert" type="Sprite2D" parent="Game" unique_id=1830042996]
+visible = false
+position = Vector2(1137.4696, 533.3333)
+scale = Vector2(3.6861055, 3.6861055)
+texture = ExtResource("24_pgif8")
+
+[node name="StaticWalls" type="StaticBody2D" parent="Game" unique_id=1245422038]
+position = Vector2(1434.3064, 779.71014)
+scale = Vector2(0.839416, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/StaticWalls" unique_id=720786628]
+texture = ExtResource("32_hxgnl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/StaticWalls" unique_id=979593986]
+position = Vector2(-166.5, 160)
+shape = SubResource("RectangleShape2D_wv3ui")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Game/StaticWalls" unique_id=1727994086]
+position = Vector2(155.5, -136.5)
+shape = SubResource("RectangleShape2D_36ipj")
+
+[node name="Wall1" parent="Game" unique_id=1367497213 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("26_np45m")]
+position = Vector2(1260.3406, 478.26086)
+scale = Vector2(0.839416, 1)
+button_visible_path = NodePath("../../UI/Buttons/Object1/HBoxContainer/Visible")
+button_mask = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Invert")
+visible_full = true
+
+[node name="Wall2" parent="Game" unique_id=597415289 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("27_bnu1n")]
+position = Vector2(1209.2457, 739.13043)
+scale = Vector2(0.839416, 1)
+button_visible_path = NodePath("../../UI/Buttons/Object2/HBoxContainer/Button")
+button_mask = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Invert")
+
+[node name="Wall3" parent="Game" unique_id=717406654 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("28_6jw4k")]
+position = Vector2(1610.7054, 862.3188)
+scale = Vector2(0.839416, 1)
+button_visible_path = NodePath("../../UI/Buttons/Object5/HBoxContainer/Visible")
+button_mask = NodePath("../../UI/Buttons/Object5/HBoxContainer2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object5/HBoxContainer2/Invert")
+
+[node name="Wall4" parent="Game" unique_id=1366181382 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("29_tavc7")]
+position = Vector2(906.32605, 478.26086)
+scale = Vector2(0.839416, 1)
+button_visible_path = NodePath("../../UI/Buttons/Object6/HBoxContainer/Visible")
+button_mask = NodePath("../../UI/Buttons/Object6/HBoxContainer2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object6/HBoxContainer2/Invert")
+
+[node name="Wall5" parent="Game" unique_id=1481696951 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("30_aojge")]
+position = Vector2(1110.7056, 411.59418)
+scale = Vector2(0.839416, 1)
+button_visible_path = NodePath("../../UI/Buttons/Object8/HBoxContainer/Visible")
+button_mask = NodePath("../../UI/Buttons/Object8/HBoxContainer2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object8/HBoxContainer2/Invert")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=24604805]
+position = Vector2(299.00003, 129)
+scale = Vector2(0.8550934, 0.69)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=1817404952]
+position = Vector2(1013.8866, 611.5942)
+scale = Vector2(0.733203, 0.84)
+texture = ExtResource("25_ows7i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=764256727]
+position = Vector2(1010.3407, 1019.56506)
+shape = SubResource("RectangleShape2D_xl8hg")
+
+[node name="Annoyance" type="Control" parent="." unique_id=1469226107 node_paths=PackedStringArray("player")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("30_c6h6h")
+player = NodePath("../Game/Stickman")
+
+[node name="Timer" type="Timer" parent="Annoyance" unique_id=601031419]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="UI/ProgressBar/Timer" to="UI/ProgressBar" method="_on_timer_timeout"]
+[connection signal="button_down" from="UI/Button2" to="UI/Button2" method="_on_button_down"]
+[connection signal="body_entered" from="Game/Door2" to="Game/Door2" method="_on_body_entered"]
+[connection signal="timeout" from="Annoyance/Timer" to="Annoyance" method="_on_timer_timeout"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://begbgu40hlt8j"
+path="res://.godot/imported/AE Adventure Pantalla de inicio.wav-5c56f1cd600a4aa4d63aea37ae29d658.sample"
+
+[deps]
+
+source_file="res://assets/AE Adventure Pantalla de inicio.wav"
+dest_files=["res://.godot/imported/AE Adventure Pantalla de inicio.wav-5c56f1cd600a4aa4d63aea37ae29d658.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

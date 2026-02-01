@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cc0s0qb8d84re"]
+
+[ext_resource type="Script" uid="uid://cnw43w3c3pfin" path="res://assets/scripts/wall.gd" id="1_ifxq3"]
+[ext_resource type="Texture2D" uid="uid://3l3ys5ei70eu" path="res://assets/sprites/Nivel 4/Pared 4 - L4 - A.png" id="2_ifxq3"]
+[ext_resource type="Texture2D" uid="uid://4ereb1rxyo3e" path="res://assets/sprites/Nivel 4/Pared 4 - L4 - B.png" id="3_sl4da"]
+[ext_resource type="Texture2D" uid="uid://4vtkbux0c85f" path="res://assets/sprites/Nivel 4/Pared 4 - L4 - C.png" id="4_ifxq3"]
+[ext_resource type="Script" uid="uid://up46x0vv518c" path="res://assets/scripts/DobleCollisionFull.gd" id="5_o4inm"]
+[ext_resource type="Script" uid="uid://ciljdqflvhar3" path="res://assets/scripts/DobleCollisionActivation.gd" id="6_xx7qf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18c8o"]
+size = Vector2(725, 522)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwh5v"]
+size = Vector2(601, 435)
+
+[node name="Node2D" type="Node2D" unique_id=1367497213 node_paths=PackedStringArray("full", "mask", "inverted", "full_collision", "mask_collision", "inverted_collision")]
+script = ExtResource("1_ifxq3")
+full = NodePath("Wall/Full")
+mask = NodePath("Wall/Mask")
+inverted = NodePath("Wall/Inverted")
+full_collision = NodePath("Wall/FullCollision")
+mask_collision = NodePath("Wall/MaskCollision")
+inverted_collision = NodePath("Wall/InvertedCollision")
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=360763863]
+
+[node name="Full" type="Sprite2D" parent="Wall" unique_id=733697231]
+visible = false
+texture = ExtResource("2_ifxq3")
+
+[node name="Mask" type="Sprite2D" parent="Wall" unique_id=1330926084]
+texture = ExtResource("3_sl4da")
+
+[node name="Inverted" type="Sprite2D" parent="Wall" unique_id=740074628]
+visible = false
+texture = ExtResource("4_ifxq3")
+
+[node name="FullCollision" type="CollisionShape2D" parent="Wall" unique_id=1296995104 node_paths=PackedStringArray("partners")]
+visible = false
+position = Vector2(-312.5, -217)
+shape = SubResource("RectangleShape2D_18c8o")
+script = ExtResource("5_o4inm")
+partners = [NodePath("../FullCollision2")]
+
+[node name="FullCollision2" type="CollisionShape2D" parent="Wall" unique_id=443327525]
+visible = false
+position = Vector2(372.5, 261.5)
+shape = SubResource("RectangleShape2D_kwh5v")
+
+[node name="MaskCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1301042776 node_paths=PackedStringArray("partners")]
+scale = Vector2(0.6454727, 0.67352474)
+polygon = PackedVector2Array(-690.96643, 66.81269, -690.96643, -712.6687, -368.72202, -711.18396, -367.17276, 63.843235)
+disabled = true
+script = ExtResource("6_xx7qf")
+partners = [NodePath("../MaskCollision2")]
+
+[node name="MaskCollision2" type="CollisionPolygon2D" parent="Wall" unique_id=702288818]
+visible = false
+polygon = PackedVector2Array(63, 61, 75, 41, 238, 45, 673, 494, 74, 479)
+
+[node name="InvertedCollision" type="CollisionPolygon2D" parent="Wall" unique_id=847925910 node_paths=PackedStringArray("partners")]
+visible = false
+polygon = PackedVector2Array(-675, 40, -675, -480, -455, -478, -454, 43)
+script = ExtResource("6_xx7qf")
+partners = [NodePath("../InvertedCollision2"), NodePath("../InvertedCollision3")]
+
+[node name="InvertedCollision2" type="CollisionPolygon2D" parent="Wall" unique_id=1551722761]
+visible = false
+polygon = PackedVector2Array(-231, 39, -229, -479, 50, -478, 50, 43)
+
+[node name="InvertedCollision3" type="CollisionPolygon2D" parent="Wall" unique_id=1754984326]
+visible = false
+polygon = PackedVector2Array(253, 43, 675, 44, 676, 467)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cipy41uktwftj"]
 
-[ext_resource type="Texture2D" uid="uid://dpa24lhcrcn8e" path="res://assets/sprites/UI/Sample_Error_Message.webp" id="1_w231c"]
+[ext_resource type="Texture2D" uid="uid://xj4tisa6p0rf" path="res://assets/sprites/clippy_con_msj.png" id="2_cokke"]
 [ext_resource type="Script" uid="uid://qfdsgrdr40pq" path="res://assets/scripts/Close_popup_slow.gd" id="2_vrmei"]
 
 [node name="PopupSlow" type="Control" unique_id=1788948262]
@@ -15,17 +15,19 @@ script = ExtResource("2_vrmei")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1143326300]
 layout_mode = 0
-offset_left = 568.0802
-offset_top = 351.99225
-offset_right = 861.0802
-offset_bottom = 477.99225
-texture = ExtResource("1_w231c")
+offset_left = 654.1529
+offset_top = 283.13403
+offset_right = 1243.1528
+offset_bottom = 846.13403
+scale = Vector2(0.3646632, 0.3646632)
+texture = ExtResource("2_cokke")
 
 [node name="Button" type="Button" parent="." unique_id=430723716]
 layout_mode = 0
-offset_left = 835.0802
-offset_top = 357.99225
-offset_right = 855.0802
-offset_bottom = 375.99225
+offset_left = 700.3604
+offset_top = 371.4719
+offset_right = 726.63525
+offset_bottom = 383.85553
+scale = Vector2(1, 0.80659735)
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

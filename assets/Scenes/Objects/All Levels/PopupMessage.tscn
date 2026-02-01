@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bta23qnhf6cg0"]
 
-[ext_resource type="Texture2D" uid="uid://dpoei4h3mt83r" path="res://assets/sprites/long message placeholder.jpg" id="1_mrb7r"]
+[ext_resource type="Texture2D" uid="uid://d0cdtk1f42hrt" path="res://assets/sprites/Notificacion_MSN.png" id="1_pbku6"]
 [ext_resource type="Script" uid="uid://ctevbwrioopfm" path="res://assets/scripts/Close_popup.gd" id="2_3yfa1"]
 
 [node name="Control" type="Control" unique_id=1731765334]
@@ -13,16 +13,18 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1058067566]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = 310.0
+offset_right = 878.0
+offset_bottom = 1104.0
+scale = Vector2(0.7198501, 0.7198501)
 mouse_filter = 0
-texture = ExtResource("1_mrb7r")
+texture = ExtResource("1_pbku6")
 
 [node name="Button" type="Button" parent="." unique_id=204937716]
 layout_mode = 0
-offset_left = 578.0
-offset_right = 740.0
-offset_bottom = 77.0
+offset_left = 575.0
+offset_top = 322.0
+offset_right = 600.0
+offset_bottom = 348.0
 theme_override_font_sizes/font_size = 50
-text = "Cerrar"
 script = ExtResource("2_3yfa1")

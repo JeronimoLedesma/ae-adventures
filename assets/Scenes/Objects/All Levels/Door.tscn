@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://4p04wa4addxh" path="res://assets/sprites/Puerta-00.png" id="1_lm33y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfvsx"]
-size = Vector2(198, 234)
+size = Vector2(150, 234)
 
 [node name="Area2D" type="Area2D" unique_id=1585223162]
 
@@ -11,5 +11,5 @@ size = Vector2(198, 234)
 texture = ExtResource("1_lm33y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=947032597]
-position = Vector2(-5, 8)
+position = Vector2(-10, 8)
 shape = SubResource("RectangleShape2D_hfvsx")

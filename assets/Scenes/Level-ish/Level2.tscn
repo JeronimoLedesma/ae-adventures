@@ -252,7 +252,7 @@ offset_left = 8.0
 offset_top = 143.00003
 offset_right = 814.1159
 offset_bottom = 587.0
-scale = Vector2(0.63018227, 0.63018227)
+scale = Vector2(0.5546693, 0.5546693)
 theme = ExtResource("3_y8710")
 
 [node name="Object1" type="HBoxContainer" parent="UI/Buttons2" unique_id=1086780073]
@@ -388,8 +388,7 @@ scale = Vector2(0.84000003, 1)
 texture = ExtResource("22_igr5m")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Game/HigherFloor" unique_id=958182391]
-visible = false
-polygon = PackedVector2Array(304.13626, 302.29855, 563.2604, 302.29855, 574.2092, 308.09567, 575.4258, 429.83478, 304.13626, 429.83478)
+polygon = PackedVector2Array(304.13626, 302.29855, 565.6935, 292.7536, 575.4258, 302.89856, 575.4258, 429.83478, 304.13626, 429.83478)
 
 [node name="Key" parent="Game" unique_id=1585223162 instance=ExtResource("16_nt7mw")]
 position = Vector2(1824.8174, 385.50723)
