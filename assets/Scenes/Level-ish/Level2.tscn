@@ -19,13 +19,15 @@
 [ext_resource type="PackedScene" uid="uid://d3q0s1a0b86sg" path="res://assets/Scenes/Objects/All Levels/Door.tscn" id="17_q3w04"]
 [ext_resource type="Script" uid="uid://b0ak687cflfy1" path="res://assets/scripts/timer_bar.gd" id="18_50ejg"]
 [ext_resource type="Script" uid="uid://v5xqp2kmgwi4" path="res://assets/scripts/QuitButton.gd" id="19_ljskc"]
-[ext_resource type="Texture2D" uid="uid://8qfigmn22aqe" path="res://assets/sprites/Level2/LAYOUT LEVEL 2.jpg" id="20_i86dy"]
+[ext_resource type="Texture2D" uid="uid://bt6k7j1lkndyi" path="res://assets/sprites/Level1/Fondo.jpg" id="20_dipdw"]
 [ext_resource type="Texture2D" uid="uid://brj634fmasmjk" path="res://assets/sprites/Level1/Piso bloqueado.png" id="22_igr5m"]
 [ext_resource type="Texture2D" uid="uid://bwbym7qih8ppd" path="res://assets/sprites/Level2/Piso - L2.png" id="24_sqvr4"]
 [ext_resource type="PackedScene" uid="uid://n3h8dhnusdwl" path="res://assets/Scenes/stickman.tscn" id="25_7ocre"]
 [ext_resource type="PackedScene" uid="uid://coebwqifadh7f" path="res://assets/Scenes/Objects/Level 2/Layers_Wall.tscn" id="25_pluee"]
 [ext_resource type="PackedScene" uid="uid://cka0b17pxm3mr" path="res://assets/Scenes/Objects/Level 2/Layers_Wall2.tscn" id="26_4p51e"]
 [ext_resource type="Texture2D" uid="uid://dpa24lhcrcn8e" path="res://assets/sprites/UI/Sample_Error_Message.webp" id="26_5fe4h"]
+[ext_resource type="PackedScene" uid="uid://csgjjaruwx03u" path="res://assets/Scenes/Objects/Level 2/Layers_Wall3.tscn" id="27_dipdw"]
+[ext_resource type="Script" uid="uid://d2ifk2amgms3d" path="res://assets/scripts/annoyance.gd" id="28_1p541"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jb4np"]
 size = Vector2(102, 1085)
@@ -74,6 +76,7 @@ layout_mode = 2
 icon = ExtResource("4_gueys")
 flat = true
 script = ExtResource("5_q6rae")
+toggle = true
 toggled_button = ExtResource("6_r6cay")
 untoggled_button = ExtResource("4_gueys")
 
@@ -361,7 +364,7 @@ position = Vector2(1111, 540)
 scale = Vector2(0.84000003, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Game/Background" unique_id=235513550]
-texture = ExtResource("20_i86dy")
+texture = ExtResource("20_dipdw")
 
 [node name="InvisibleWall" type="StaticBody2D" parent="Game" unique_id=744991550]
 
@@ -400,7 +403,7 @@ scale = Vector2(0.84, 0.84)
 [node name="Stickman" parent="Game" unique_id=564413360 node_paths=PackedStringArray("key", "door", "deathplane", "deathAlert") instance=ExtResource("25_7ocre")]
 position = Vector2(375.91245, 869.5652)
 SPEED = 300
-currentLevel = 1
+currentLevel = 2
 GRAVITY = 600
 key = NodePath("../Key")
 door = NodePath("../Door")
@@ -422,7 +425,6 @@ scale = Vector2(3.6861055, 3.6861055)
 texture = ExtResource("26_5fe4h")
 
 [node name="Floor" type="StaticBody2D" parent="Game" unique_id=24604805]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Game/Floor" unique_id=1817404952]
 position = Vector2(1110.7056, 611.5942)
@@ -437,16 +439,39 @@ shape = SubResource("RectangleShape2D_xl8hg")
 position = Vector2(1669.0997, 1021.73914)
 shape = SubResource("RectangleShape2D_o7own")
 
-[node name="Node2D" parent="Game/Floor" unique_id=1367497213 instance=ExtResource("25_pluee")]
-position = Vector2(925.7907, 466.6667)
-scale = Vector2(0.85814, 0.97408026)
+[node name="Node2D2" parent="Game" unique_id=1367497213 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("25_pluee")]
+position = Vector2(922.1411, 466.66663)
+scale = Vector2(0.839416, 1)
+button_visible_path = NodePath("../../UI/Buttons/Object2/HBoxContainer/Button")
+button_mask = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Invert")
 
-[node name="Node2D" parent="." unique_id=1943622053 node_paths=PackedStringArray("button_visible", "button_mask", "button_invert") instance=ExtResource("26_4p51e")]
-position = Vector2(1340, 622.00006)
-scale = Vector2(0.67999995, 0.6800006)
-button_visible = NodePath("../UI/Buttons/Object1/HBoxContainer/Visible")
-button_mask = NodePath("../UI/Buttons/Object1/HBoxContainer2/Mask")
-button_invert = NodePath("../UI/Buttons/Object1/HBoxContainer2/Invert")
+[node name="Node2D3" parent="Game" unique_id=103112619 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("27_dipdw")]
+position = Vector2(1566.9102, 727.5362)
+scale = Vector2(0.839416, 1)
+button_visible_path = NodePath("../../UI/Buttons/Object5/HBoxContainer/Visible")
+button_mask = NodePath("../../UI/Buttons/Object5/HBoxContainer2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object5/HBoxContainer2/Invert")
+
+[node name="Node2D" parent="Game" unique_id=1943622053 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("26_4p51e")]
+position = Vector2(1253.0414, 714.49286)
+scale = Vector2(0.839416, 1)
+button_visible_path = NodePath("../../UI/Buttons/Object1/HBoxContainer/Visible")
+button_mask = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Invert")
+
+[node name="Annoyance" type="Control" parent="." unique_id=1469226107 node_paths=PackedStringArray("player")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("28_1p541")
+player = NodePath("../Game/Stickman")
+
+[node name="Timer" type="Timer" parent="Annoyance" unique_id=601031419]
+wait_time = 8.0
+autostart = true
 
 [connection signal="timeout" from="UI/ProgressBar/Timer" to="UI/ProgressBar" method="_on_timer_timeout"]
 [connection signal="button_down" from="UI/Button2" to="UI/Button2" method="_on_button_down"]
+[connection signal="timeout" from="Annoyance/Timer" to="Annoyance" method="_on_timer_timeout"]

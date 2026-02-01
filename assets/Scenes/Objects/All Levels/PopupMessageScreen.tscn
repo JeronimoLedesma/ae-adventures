@@ -13,17 +13,19 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1058067566]
 layout_mode = 0
-offset_right = 968.8074
-offset_bottom = 792.0
+offset_left = 784.0
+offset_top = 84.0
+offset_right = 1752.8074
+offset_bottom = 876.0
 mouse_filter = 0
 texture = ExtResource("1_dsbth")
 
 [node name="Button" type="Button" parent="." unique_id=204937716]
 layout_mode = 0
-offset_left = 874.00006
-offset_top = 60.0
-offset_right = 893.00006
-offset_bottom = 76.0
+offset_left = 1658.0
+offset_top = 144.0
+offset_right = 1677.0
+offset_bottom = 160.0
 scale = Vector2(1.4999084, 1.4999084)
 theme_override_font_sizes/font_size = 50
 script = ExtResource("2_32era")

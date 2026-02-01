@@ -43,9 +43,6 @@ scale = Vector2(0.6454727, 0.67352474)
 polygon = PackedVector2Array(-325.34296, -550.8335, 320.6952, -549.34875, 325.34296, 8.908359, 320.6952, 348.9107, -333.0892, 351.88016)
 disabled = true
 
-[node name="InvertedCollision" type="CollisionPolygon2D" parent="Wall" unique_id=2024017732]
+[node name="InvertedCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1893653067]
 visible = false
-position = Vector2(-144, 49)
-scale = Vector2(0.84065485, 0.84065485)
-polygon = PackedVector2Array(-83.26843, 224.82474, 419.91074, 384.22427, 422.28986, 226.01428)
-disabled = true
+polygon = PackedVector2Array(-218.18184, 248, -196.59093, 238, 207.95456, 239, 206.8182, 369, -214.77275, 370)

@@ -46,9 +46,16 @@ func _on_die(body: CharacterBody2D):
 
 func wait(seconds):
 	await get_tree().create_timer(seconds).timeout
+	
+
+func increase_speed():
+	SPEED = SPEED*2
+
+func decrease_speed():
+	SPEED = SPEED/2
 
 func _on_door_enter(body: CharacterBody2D):
 	if has_key && (body == self):
 		Singleton.complete_level(currentLevel)
 		Music.bgm_stop()
-		get_tree().change_scene_to_file("res://assets/Scenes/LevelSelect.tscn")
+		get_tree().change_scene_to_file("res://assets/Scenes/Level-ish/LevelSelect.tscn")

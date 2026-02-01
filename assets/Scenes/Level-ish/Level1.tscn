@@ -224,7 +224,6 @@ text = "Comp. 1"
 icon = ExtResource("13_1cgb5")
 script = ExtResource("14_5escr")
 lock = NodePath("../Lock 1")
-scene = null
 
 [node name="Lock 1" type="Button" parent="UI/Buttons2/Object1" unique_id=910589755]
 layout_mode = 2
@@ -362,17 +361,17 @@ texture = ExtResource("4_v0j53")
 visible = false
 polygon = PackedVector2Array(304.13626, 302.29855, 563.2604, 302.29855, 574.2092, 308.09567, 575.4258, 429.83478, 304.13626, 429.83478)
 
-[node name="Object1" parent="Game" unique_id=1367497213 node_paths=PackedStringArray("button_visible", "button_mask", "button_invert") instance=ExtResource("6_v0j53")]
+[node name="Object1" parent="Game" unique_id=1367497213 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("6_v0j53")]
 position = Vector2(1110.0001, 596)
 scale = Vector2(0.84, 0.84)
-button_visible = NodePath("../../UI/Buttons/Object1/HBoxContainer/Visible")
+button_visible_path = NodePath("../../UI/Buttons/Object1/HBoxContainer/Visible")
 button_mask = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Mask")
 button_invert = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Invert")
 
-[node name="Object2" parent="Game" unique_id=1339143741 node_paths=PackedStringArray("button_visible", "button_mask", "button_invert") instance=ExtResource("7_17eo5")]
+[node name="Object2" parent="Game" unique_id=1339143741 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("7_17eo5")]
 position = Vector2(1106, 605.00006)
 scale = Vector2(0.84, 0.84)
-button_visible = NodePath("../../UI/Buttons/Object2/HBoxContainer/Visible")
+button_visible_path = NodePath("../../UI/Buttons/Object2/HBoxContainer/Visible")
 button_mask = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Mask")
 button_invert = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Invert")
 visible_full = true

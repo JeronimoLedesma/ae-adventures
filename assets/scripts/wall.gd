@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var button_visible: Button
+@export var button_visible_path: NodePath
 @export var button_mask: Button
 @export var button_invert: Button
 @export var visible_full: bool
@@ -14,6 +14,7 @@ extends Node2D
 @export var inverted_collision: CollisionPolygon2D
 
 func _ready() -> void:
+	var button_visible = get_node(button_visible_path)
 	button_visible.button_down.connect(_on_button_visible_button_down)
 	button_mask.button_down.connect(_on_button_mask_button_down)
 	button_invert.button_down.connect(_on_button_invert_button_down)

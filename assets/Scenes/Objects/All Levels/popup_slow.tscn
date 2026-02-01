@@ -11,17 +11,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.207435, 2.207435)
+script = ExtResource("2_vrmei")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1143326300]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 568.0802
+offset_top = 351.99225
+offset_right = 861.0802
+offset_bottom = 477.99225
 texture = ExtResource("1_w231c")
 
 [node name="Button" type="Button" parent="." unique_id=430723716]
 layout_mode = 0
-offset_left = 267.0
-offset_top = 6.0
-offset_right = 287.0
-offset_bottom = 24.0
-script = ExtResource("2_vrmei")
+offset_left = 835.0802
+offset_top = 357.99225
+offset_right = 855.0802
+offset_bottom = 375.99225
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
