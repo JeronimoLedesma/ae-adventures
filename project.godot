@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="AE_Adventures"
-run/main_scene="uid://diqx60uhy4xrn"
+run/main_scene="uid://bthhxw1fo8igh"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

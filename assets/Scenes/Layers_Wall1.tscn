@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://clvajesb6telb" path="res://assets/sprites/Level1/Pared 1 - C.png" id="3_cuybx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18c8o"]
-size = Vector2(1343, 760)
+size = Vector2(1343, 771)
 
 [node name="Node2D" type="Node2D" unique_id=1367497213 node_paths=PackedStringArray("full", "mask", "inverted", "full_collision", "mask_collision", "inverted_collision")]
 script = ExtResource("1_x0hgc")
@@ -32,12 +32,12 @@ texture = ExtResource("3_cuybx")
 
 [node name="FullCollision" type="CollisionShape2D" parent="Wall" unique_id=1296995104]
 visible = false
-position = Vector2(32.5, 45)
+position = Vector2(32.5, 39.5)
 shape = SubResource("RectangleShape2D_18c8o")
 
 [node name="MaskCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1301042776]
 visible = false
-polygon = PackedVector2Array(-649, -347, 299, -346, 710, 67, 710, 428, -646, 431)
+polygon = PackedVector2Array(-644, -347, 299, -346, 710, 67, 710, 428, -646, 431)
 disabled = true
 
 [node name="InvertedCollision" type="CollisionPolygon2D" parent="Wall" unique_id=2024017732]

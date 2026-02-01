@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dciaeb8w6tgec"]
+
+[ext_resource type="Texture2D" uid="uid://cgigs38qehh11" path="res://assets/sprites/img_01.webp" id="1_dsbth"]
+[ext_resource type="Script" uid="uid://ctevbwrioopfm" path="res://assets/scripts/Close_popup.gd" id="2_32era"]
+
+[node name="Control" type="Control" unique_id=1731765334]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1058067566]
+layout_mode = 0
+offset_right = 968.8074
+offset_bottom = 792.0
+mouse_filter = 0
+texture = ExtResource("1_dsbth")
+
+[node name="Button" type="Button" parent="." unique_id=204937716]
+layout_mode = 0
+offset_left = 874.00006
+offset_top = 60.0
+offset_right = 893.00006
+offset_bottom = 76.0
+scale = Vector2(1.4999084, 1.4999084)
+theme_override_font_sizes/font_size = 50
+script = ExtResource("2_32era")

@@ -26,9 +26,6 @@ size = Vector2(102, 1085)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17eo5"]
 size = Vector2(1911, 116)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_spd5k"]
-size = Vector2(310, 110)
-
 [node name="Node2D" type="Node2D" unique_id=5663288]
 
 [node name="UI" type="Control" parent="." unique_id=2131463720]
@@ -133,6 +130,7 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="UI/Buttons/Object3/HBoxContainer" unique_id=1140558950]
 layout_mode = 2
+disabled = true
 icon = ExtResource("5_4hsav")
 
 [node name="Label2" type="Label" parent="UI/Buttons/Object3/HBoxContainer" unique_id=1329536943]
@@ -145,14 +143,17 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="UI/Buttons/Object3/HBoxContainer2" unique_id=853777522]
 layout_mode = 2
+disabled = true
 icon = ExtResource("4_gts6m")
 
 [node name="Button2" type="Button" parent="UI/Buttons/Object3/HBoxContainer2" unique_id=917566664]
 layout_mode = 2
+disabled = true
 icon = ExtResource("5_nfwm3")
 
 [node name="Button3" type="Button" parent="UI/Buttons/Object3/HBoxContainer2" unique_id=663144041]
 layout_mode = 2
+disabled = true
 icon = ExtResource("10_vhp58")
 
 [node name="Object4" type="HBoxContainer" parent="UI/Buttons" unique_id=2100711568]
@@ -164,6 +165,7 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="UI/Buttons/Object4/HBoxContainer" unique_id=190430106]
 layout_mode = 2
+disabled = true
 icon = ExtResource("5_4hsav")
 
 [node name="Label2" type="Label" parent="UI/Buttons/Object4/HBoxContainer" unique_id=1327622115]
@@ -241,17 +243,16 @@ scale = Vector2(0.84000003, 1)
 shape = SubResource("RectangleShape2D_17eo5")
 
 [node name="HigherFloor" type="StaticBody2D" parent="Game" unique_id=1229442394]
+position = Vector2(0, 0.6)
 
 [node name="Sprite2D" type="Sprite2D" parent="Game/HigherFloor" unique_id=129301006]
 position = Vector2(1110, 650)
 scale = Vector2(0.84000003, 1)
 texture = ExtResource("4_v0j53")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/HigherFloor" unique_id=997768393]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Game/HigherFloor" unique_id=958182391]
 visible = false
-position = Vector2(432.12, 367)
-scale = Vector2(0.84000003, 1)
-shape = SubResource("RectangleShape2D_spd5k")
+polygon = PackedVector2Array(304.13626, 302.29855, 563.2604, 302.29855, 574.2092, 308.09567, 575.4258, 429.83478, 304.13626, 429.83478)
 
 [node name="Object1" parent="Game" unique_id=1367497213 node_paths=PackedStringArray("button_visible", "button_mask", "button_invert") instance=ExtResource("6_v0j53")]
 position = Vector2(1110.0001, 596)
@@ -277,7 +278,7 @@ position = Vector2(1141, 608)
 scale = Vector2(0.84, 0.84)
 
 [node name="Stickman" parent="Game" unique_id=564413360 node_paths=PackedStringArray("key", "door") instance=ExtResource("2_17eo5")]
-position = Vector2(379, 862)
+position = Vector2(375.91245, 869.5652)
 SPEED = 350
 currentLevel = 1
 GRAVITY = 600

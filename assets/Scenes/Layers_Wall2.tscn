@@ -14,8 +14,8 @@ full = NodePath("Wall/Full")
 mask = NodePath("Wall/Mask")
 inverted = NodePath("Wall/Inverted")
 full_collision = NodePath("Wall/FullCollision")
-mask_collision = NodePath("Wall/MaskCollision")
-inverted_collision = NodePath("Wall/InvertedCollision")
+mask_collision = NodePath("Wall/InvertedCollision")
+inverted_collision = NodePath("Wall/MaskCollision")
 
 [node name="Wall" type="StaticBody2D" parent="." unique_id=360763863]
 
@@ -24,11 +24,11 @@ texture = ExtResource("2_f2hsn")
 
 [node name="Mask" type="Sprite2D" parent="Wall" unique_id=1330926084]
 visible = false
-texture = ExtResource("3_g2qld")
+texture = ExtResource("4_hepti")
 
 [node name="Inverted" type="Sprite2D" parent="Wall" unique_id=740074628]
 visible = false
-texture = ExtResource("4_hepti")
+texture = ExtResource("3_g2qld")
 
 [node name="FullCollision" type="CollisionShape2D" parent="Wall" unique_id=1296995104]
 visible = false

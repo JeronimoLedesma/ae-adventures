@@ -7,6 +7,7 @@
 size = Vector2(70, 171)
 
 [node name="Stickman" type="CharacterBody2D" unique_id=564413360 node_paths=PackedStringArray("spriteStickman")]
+safe_margin = 0.04
 script = ExtResource("1_a7tnr")
 spriteStickman = NodePath("Sprite2D")
 
