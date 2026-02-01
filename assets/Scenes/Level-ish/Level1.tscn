@@ -60,7 +60,7 @@ theme = ExtResource("9_jb4np")
 [node name="Object1" type="HBoxContainer" parent="UI/Buttons" unique_id=1526012969]
 layout_mode = 2
 theme = ExtResource("9_jb4np")
-theme_override_constants/separation = 150
+theme_override_constants/separation = 28
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object1" unique_id=1050632266]
 layout_mode = 2
@@ -74,8 +74,8 @@ untoggled_button = ExtResource("3_5dh08")
 
 [node name="Label" type="Label" parent="UI/Buttons/Object1/HBoxContainer" unique_id=632744941]
 layout_mode = 2
-theme_override_font_sizes/font_size = 60
-text = "Muro 1"
+theme_override_font_sizes/font_size = 55
+text = "Rampa Llave"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object1" unique_id=2110281575]
 layout_mode = 2
@@ -96,7 +96,7 @@ untoggled_button = ExtResource("5_nfwm3")
 
 [node name="Object2" type="HBoxContainer" parent="UI/Buttons" unique_id=2127301733]
 layout_mode = 2
-theme_override_constants/separation = 150
+theme_override_constants/separation = 28
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/Buttons/Object2" unique_id=1058181272]
 layout_mode = 2
@@ -111,8 +111,8 @@ untoggled_button = ExtResource("3_5dh08")
 
 [node name="Label2" type="Label" parent="UI/Buttons/Object2/HBoxContainer" unique_id=1266888372]
 layout_mode = 2
-theme_override_font_sizes/font_size = 60
-text = "Muro 2"
+theme_override_font_sizes/font_size = 55
+text = "Muro Puerta"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="UI/Buttons/Object2" unique_id=122322500]
 layout_mode = 2
@@ -251,12 +251,12 @@ icon = ExtResource("10_vhp58")
 
 [node name="Object3" type="HBoxContainer" parent="UI/Buttons2" unique_id=429321129]
 layout_mode = 2
-theme_override_constants/separation = 150
+theme_override_constants/separation = 50
 
 [node name="Button 3" type="Button" parent="UI/Buttons2/Object3" unique_id=358076857 node_paths=PackedStringArray("lock")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
-text = "Comp. 3"
+text = "Comp. Final"
 icon = ExtResource("13_1cgb5")
 script = ExtResource("14_5escr")
 level = 2
@@ -270,12 +270,12 @@ icon = ExtResource("10_vhp58")
 
 [node name="Object4" type="HBoxContainer" parent="UI/Buttons2" unique_id=2062351214]
 layout_mode = 2
-theme_override_constants/separation = 150
+theme_override_constants/separation = 80
 
 [node name="Button 4" type="Button" parent="UI/Buttons2/Object4" unique_id=45787764 node_paths=PackedStringArray("lock")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 60
-text = "Comp. 4"
+theme_override_font_sizes/font_size = 50
+text = "final ahora si"
 icon = ExtResource("13_1cgb5")
 script = ExtResource("14_5escr")
 level = 3
@@ -361,21 +361,6 @@ texture = ExtResource("4_v0j53")
 visible = false
 polygon = PackedVector2Array(304.13626, 302.29855, 563.2604, 302.29855, 574.2092, 308.09567, 575.4258, 429.83478, 304.13626, 429.83478)
 
-[node name="Object1" parent="Game" unique_id=1367497213 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("6_v0j53")]
-position = Vector2(1110.0001, 596)
-scale = Vector2(0.84, 0.84)
-button_visible_path = NodePath("../../UI/Buttons/Object1/HBoxContainer/Visible")
-button_mask = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Mask")
-button_invert = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Invert")
-
-[node name="Object2" parent="Game" unique_id=1339143741 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("7_17eo5")]
-position = Vector2(1106, 605.00006)
-scale = Vector2(0.84, 0.84)
-button_visible_path = NodePath("../../UI/Buttons/Object2/HBoxContainer/Visible")
-button_mask = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Mask")
-button_invert = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Invert")
-visible_full = true
-
 [node name="Key" parent="Game" unique_id=1585223162 instance=ExtResource("7_spd5k")]
 position = Vector2(430.65692, 150.72464)
 scale = Vector2(0.63793993, 0.63793993)
@@ -383,6 +368,21 @@ scale = Vector2(0.63793993, 0.63793993)
 [node name="Door" parent="Game" unique_id=2132548742 instance=ExtResource("8_jb4np")]
 position = Vector2(1828.4673, 844.9275)
 scale = Vector2(0.84, 0.84)
+
+[node name="Object1" parent="Game" unique_id=1367497213 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("6_v0j53")]
+position = Vector2(1110.0002, 596)
+scale = Vector2(0.84, 0.84)
+button_visible_path = NodePath("../../UI/Buttons/Object1/HBoxContainer/Visible")
+button_mask = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object1/HBoxContainer2/Invert")
+
+[node name="Object2" parent="Game" unique_id=1339143741 node_paths=PackedStringArray("button_mask", "button_invert") instance=ExtResource("7_17eo5")]
+position = Vector2(1106.0001, 605.00006)
+scale = Vector2(0.84, 0.84)
+button_visible_path = NodePath("../../UI/Buttons/Object2/HBoxContainer/Visible")
+button_mask = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Mask")
+button_invert = NodePath("../../UI/Buttons/Object2/HBoxContainer2/Invert")
+visible_full = true
 
 [node name="Stickman" parent="Game" unique_id=564413360 node_paths=PackedStringArray("key", "door", "deathplane", "deathAlert") instance=ExtResource("2_17eo5")]
 position = Vector2(375.91245, 869.5652)

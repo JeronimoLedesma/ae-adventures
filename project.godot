@@ -13,7 +13,7 @@ config_version=5
 config/name="AE_Adventures"
 run/main_scene="uid://bthhxw1fo8igh"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="uid://dv7ta26qnkrxy"
+config/icon="uid://bpiua4ejvrkd7"
 
 [autoload]
 

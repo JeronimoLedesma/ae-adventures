@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dk1jd7vjfki1b"]
+
+[ext_resource type="Script" uid="uid://cnw43w3c3pfin" path="res://assets/scripts/wall.gd" id="1_tgc45"]
+[ext_resource type="Texture2D" uid="uid://dk3snttbife4n" path="res://assets/sprites/Nivel 3/Pared 3 - L3 - A.png" id="2_tgc45"]
+[ext_resource type="Texture2D" uid="uid://d4m22xggbexqy" path="res://assets/sprites/Nivel 3/Pared 3 - L3 - B.png" id="3_04m82"]
+[ext_resource type="Texture2D" uid="uid://dhgx3y302opjy" path="res://assets/sprites/Nivel 3/Pared 3 - L3 - C.png" id="4_wqo4i"]
+[ext_resource type="Script" uid="uid://ciljdqflvhar3" path="res://assets/scripts/DobleCollisionActivation.gd" id="5_aptfa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18c8o"]
+size = Vector2(1029, 953)
+
+[node name="Node2D" type="Node2D" unique_id=1367497213 node_paths=PackedStringArray("full", "mask", "inverted", "full_collision", "mask_collision", "inverted_collision")]
+script = ExtResource("1_tgc45")
+full = NodePath("Wall/Full")
+mask = NodePath("Wall/Mask")
+inverted = NodePath("Wall/Inverted")
+full_collision = NodePath("Wall/FullCollision")
+mask_collision = NodePath("Wall/MaskCollision")
+inverted_collision = NodePath("Wall/InvertedCollision")
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=360763863]
+
+[node name="Full" type="Sprite2D" parent="Wall" unique_id=733697231]
+texture = ExtResource("2_tgc45")
+
+[node name="Mask" type="Sprite2D" parent="Wall" unique_id=1330926084]
+visible = false
+texture = ExtResource("3_04m82")
+
+[node name="Inverted" type="Sprite2D" parent="Wall" unique_id=740074628]
+visible = false
+texture = ExtResource("4_wqo4i")
+
+[node name="FullCollision" type="CollisionShape2D" parent="Wall" unique_id=1296995104]
+visible = false
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_18c8o")
+
+[node name="MaskCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1301042776 node_paths=PackedStringArray("partner")]
+visible = false
+scale = Vector2(0.6454727, 0.67352474)
+polygon = PackedVector2Array(799.4141, 714.15344, 797.86487, -712.6687, 300.55493, -714.15344, 300.55493, 711.18396)
+disabled = true
+script = ExtResource("5_aptfa")
+partner = NodePath("../MaskCollision2")
+
+[node name="MaskCollision2" type="CollisionPolygon2D" parent="Wall" unique_id=702288818]
+visible = false
+polygon = PackedVector2Array(-514, 477, -513, -478, -198, -477, -196, 481)
+
+[node name="InvertedCollision" type="CollisionPolygon2D" parent="Wall" unique_id=847925910]
+visible = false
+polygon = PackedVector2Array(-196, 478, 197, 480, 197, -64, 199, -480, -197, -479, -198, -233)

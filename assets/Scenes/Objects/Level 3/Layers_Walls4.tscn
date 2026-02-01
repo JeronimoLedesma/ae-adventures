@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cw6folxyuh47"]
+
+[ext_resource type="Script" uid="uid://cnw43w3c3pfin" path="res://assets/scripts/wall.gd" id="1_a0xm2"]
+[ext_resource type="Texture2D" uid="uid://chsckrb5g088f" path="res://assets/sprites/Nivel 3/Pared 4 - L3 - A.png" id="2_dvoji"]
+[ext_resource type="Texture2D" uid="uid://cpn5qxguao65u" path="res://assets/sprites/Nivel 3/Pared 4 - L3 - B.png" id="3_a0xm2"]
+[ext_resource type="Texture2D" uid="uid://bxr8lqwh64rhp" path="res://assets/sprites/Nivel 3/Pared 4 - L3 - C.png" id="4_8djx0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18c8o"]
+size = Vector2(482, 352)
+
+[node name="Node2D" type="Node2D" unique_id=1367497213 node_paths=PackedStringArray("full", "mask", "inverted", "full_collision", "mask_collision", "inverted_collision")]
+script = ExtResource("1_a0xm2")
+full = NodePath("Wall/Full")
+mask = NodePath("Wall/Mask")
+inverted = NodePath("Wall/Inverted")
+full_collision = NodePath("Wall/FullCollision")
+mask_collision = NodePath("Wall/MaskCollision")
+inverted_collision = NodePath("Wall/InvertedCollision")
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=360763863]
+
+[node name="Full" type="Sprite2D" parent="Wall" unique_id=733697231]
+visible = false
+texture = ExtResource("2_dvoji")
+
+[node name="Mask" type="Sprite2D" parent="Wall" unique_id=1330926084]
+visible = false
+texture = ExtResource("3_a0xm2")
+
+[node name="Inverted" type="Sprite2D" parent="Wall" unique_id=740074628]
+texture = ExtResource("4_8djx0")
+
+[node name="FullCollision" type="CollisionShape2D" parent="Wall" unique_id=1296995104]
+visible = false
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_18c8o")
+
+[node name="MaskCollision" type="CollisionPolygon2D" parent="Wall" unique_id=1301042776]
+visible = false
+scale = Vector2(0.6454727, 0.67352474)
+polygon = PackedVector2Array(-371.82053, 265.76602, -368.72202, -267.25076, 368.72202, -262.79657, 370.27127, -151.4421, -60.420834, 264.2813)
+disabled = true
+
+[node name="InvertedCollision" type="CollisionPolygon2D" parent="Wall" unique_id=847925910]
+polygon = PackedVector2Array(-28, 183, 237, 176, 242, -90)

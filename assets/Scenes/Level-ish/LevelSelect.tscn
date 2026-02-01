@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dnct8cju8non7" path="res://assets/sprites/UI/Composicion_Icono.png" id="3_meym1"]
 [ext_resource type="Script" uid="uid://3fg005ebrvwy" path="res://assets/scripts/Level_Button.gd" id="4_vgp2n"]
 [ext_resource type="PackedScene" uid="uid://diqx60uhy4xrn" path="res://assets/Scenes/Level-ish/Level1.tscn" id="5_g5spw"]
-[ext_resource type="PackedScene" uid="uid://bthhxw1fo8igh" path="res://assets/Scenes/Level-ish/MainMenu.tscn" id="7_7mnry"]
+[ext_resource type="PackedScene" uid="uid://coqnxarvuvm8" path="res://assets/Scenes/Level-ish/Level2.tscn" id="7_8fpm6"]
+[ext_resource type="PackedScene" uid="uid://bk4dk1s65nj6" path="res://assets/Scenes/Level-ish/Level3.tscn" id="8_8ohag"]
 [ext_resource type="Script" uid="uid://v5xqp2kmgwi4" path="res://assets/scripts/QuitButton.gd" id="10_7mnry"]
 [ext_resource type="Texture2D" uid="uid://cmqnn6m1fnhn2" path="res://assets/sprites/UI/Candado.png" id="10_colby"]
-[ext_resource type="PackedScene" uid="uid://feog4n3qpmn7" path="res://assets/Scenes/Objects/All Levels/Key.tscn" id="17_pu6j8"]
 [ext_resource type="PackedScene" uid="uid://d3q0s1a0b86sg" path="res://assets/Scenes/Objects/All Levels/Door.tscn" id="18_uhlss"]
 
 [node name="Node2D" type="Node2D" unique_id=5663288]
@@ -62,7 +62,7 @@ icon = ExtResource("3_meym1")
 script = ExtResource("4_vgp2n")
 level = 1
 lock = NodePath("../Lock 2")
-scene = ExtResource("7_7mnry")
+scene = ExtResource("7_8fpm6")
 
 [node name="Lock 2" type="Button" parent="UI/Buttons/Object2" unique_id=1897645395]
 layout_mode = 2
@@ -70,17 +70,17 @@ icon = ExtResource("10_colby")
 
 [node name="Object3" type="HBoxContainer" parent="UI/Buttons" unique_id=1677670410]
 layout_mode = 2
-theme_override_constants/separation = 150
+theme_override_constants/separation = 50
 
 [node name="Button 3" type="Button" parent="UI/Buttons/Object3" unique_id=1140558950 node_paths=PackedStringArray("lock")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
-text = "Comp. 3"
+text = "Comp. Final"
 icon = ExtResource("3_meym1")
 script = ExtResource("4_vgp2n")
 level = 2
 lock = NodePath("../Lock 3")
-scene = ExtResource("17_pu6j8")
+scene = ExtResource("8_8ohag")
 
 [node name="Lock 3" type="Button" parent="UI/Buttons/Object3" unique_id=663144041]
 layout_mode = 2
@@ -88,12 +88,12 @@ icon = ExtResource("10_colby")
 
 [node name="Object4" type="HBoxContainer" parent="UI/Buttons" unique_id=2100711568]
 layout_mode = 2
-theme_override_constants/separation = 150
+theme_override_constants/separation = 80
 
 [node name="Button 4" type="Button" parent="UI/Buttons/Object4" unique_id=190430106 node_paths=PackedStringArray("lock")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 60
-text = "Comp. 4"
+theme_override_font_sizes/font_size = 50
+text = "final ahora si"
 icon = ExtResource("3_meym1")
 script = ExtResource("4_vgp2n")
 level = 3
